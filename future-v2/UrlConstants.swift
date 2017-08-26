@@ -15,40 +15,46 @@ class UrlConstants: NSObject {
     static let DOMAIN = "https://kangyonggan.com/";
 //    static let DOMAIN = "http://127.0.0.1:8080/";
     
+    // 手机端前缀
+    static let MOBILE = "mobile/";
+    
     // 登录
-    static let LOGIN = "mobile/login";
+    static let LOGIN = MOBILE + "login";
     
     // 获取验证码
-    static let AUTH_CODE = "mobile/sms";
+    static let AUTH_CODE = MOBILE + "sms";
     
     // 注册
-    static let REGISTER = "mobile/register";
+    static let REGISTER = MOBILE + "register";
     
     // 忘记密码
-    static let FORGOT = "mobile/forgot";
+    static let FORGOT = MOBILE + "forgot";
     
     // 全部分类
-    static let CATEGORY_ALL = "mobile/category/all";
+    static let CATEGORY_ALL = MOBILE + "category/all";
     
     // 推荐小说
-    static let BOOK_HOTS = "mobile/book/hots";
+    static let BOOK_HOTS = MOBILE + "book/hots";
     
     // 搜索小说
-    static let BOOK_SEARCH = "mobile/book/search";
+    static let BOOK_SEARCH = MOBILE + "book/search";
     
     // 分类小说
-    static let BOOK_CATEGORY = "mobile/book/category";
+    static let BOOK_CATEGORY = MOBILE + "book/category";
     
     // 小说第一章
-    static let SECTION_FIRST = "mobile/section/first";
+    static let SECTION_FIRST = MOBILE + "section/first";
     
     // 查找章节
-    static let SECTION = "mobile/section";
+    static let SECTION = MOBILE + "section";
     
     // 章节缓存
-    static let SECTION_CACHE = "mobile/section/cache";
+    static let SECTION_CACHE = MOBILE + "section/cache";
     
     // 全部章节
-    static let SECTION_ALL = "mobile/section/all";
+    static let SECTION_ALL = MOBILE + "section/all";
+    
+    // 修改用户信息
+    static let USER_UPDATE = MOBILE + "user/update";
     
 }

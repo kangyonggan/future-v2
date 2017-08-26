@@ -13,9 +13,6 @@ class DictionaryKey: NSObject {
     // 默认类型
     static let TYPE_DEFAULT = "TYPE_DEFAULT";
     
-    // 登录TOKEN
-    static let TOKEN = "TOKEN";
-    
     // 手机号
     static let USERNAME = "USERNAME";
     

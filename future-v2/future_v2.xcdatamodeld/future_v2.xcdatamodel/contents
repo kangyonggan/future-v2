@@ -27,9 +27,19 @@
         <attribute name="prevSectionCode" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="TUser" representedClassName="TUser" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="largeAvatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mediumAvatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="realname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="smallAvatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="TDictionary" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="TBook" positionX="-54" positionY="18" width="128" height="225"/>
+        <element name="TDictionary" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="TSection" positionX="-36" positionY="108" width="128" height="135"/>
+        <element name="TUser" positionX="-45" positionY="90" width="128" height="150"/>
     </elements>
 </model>

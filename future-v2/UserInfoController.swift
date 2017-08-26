@@ -1,52 +1,58 @@
 //
-//  MyIndexController.swift
+//  UserInfoController.swift
 //  future-v2
 //
-//  Created by kangyonggan on 8/25/17.
+//  Created by kangyonggan on 8/27/17.
 //  Copyright © 2017 kangyonggan. All rights reserved.
 //
 
 import UIKit
 import Just
 
-class MyIndexController: UIViewController {
+class UserInfoController: UIViewController {
     
     @IBOutlet weak var avatarImage: UIImageView!
-    
     @IBOutlet weak var realnameLabel: UILabel!
-    
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
         
         initView();
         
         initData();
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        
+        let user = UserService.getCurrentUser()!;
+        realnameLabel.text = user.realname;
+        if user.email!.isEmpty {
+            emailLabel.text = "未填写";
+        } else {
+            emailLabel.text = user.email;
+        }
         
     }
     
     func initView() {
-        parent?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .done, target: nil, action: nil)
-        
-        // 去掉导航条的下边框
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default);
-        self.navigationController?.navigationBar.shadowImage = UIImage();
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .done, target: nil, action: nil)
         
         // 头像圆角
         avatarImage.layer.cornerRadius = 5;
         avatarImage.layer.masksToBounds = true;
+        
     }
     
     func initData() {
         // 当前用户数据
         let user = UserService.getCurrentUser()!;
-        realnameLabel.text = user.realname;
         usernameLabel.text = user.username;
         
         // 加载头像 异步加载
         Http.get(user.largeAvatar, callback: avatarCallback);
-        
     }
     
     // 加载头像的回调
@@ -64,19 +70,12 @@ class MyIndexController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated);
-        
-        parent?.navigationItem.title = "我的";
-        let user = UserService.getCurrentUser()!;
-        realnameLabel.text = user.realname;
-    }
-    
-    // 注销
+    // 退出登录
     @IBAction func logout(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") as! LoginController;
         vc.isJump = true;
-        self.navigationController?.pushViewController(vc, animated: false);
+        self.navigationController?.show(vc, sender: nil);
     }
+    
     
 }

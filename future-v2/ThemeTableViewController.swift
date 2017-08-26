@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ThemeTableViewController: UITableViewController{
+class ThemeTableViewController: UITableViewController {
     
     let CELL_ID = "ThemeTableCell";
     

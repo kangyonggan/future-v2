@@ -20,34 +20,36 @@ class LoginController: UIViewController {
     
     // 标识
     var isShowPassword = false;// 是否显示密码
-    var isLogout = false;// 是否是注销界面跳转过来的
+    var isJump = false;// 是否是其他界面跳转过来的
     
     // 加载中菊花图标
     var loadingView: UIActivityIndicatorView!;
-    
-    let dictionaryDao = DictionaryDao();
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initView()
         
-        if !isLogout {
+        if !isJump {
             launchAnimation();
             
             tryLogin();
         } else {
-            // 删除token
-            dictionaryDao.delete(type: DictionaryKey.TYPE_DEFAULT, key: DictionaryKey.TOKEN);
+            // 删除用户的token
+            let user = UserService.getCurrentUser();
+            if user != nil {
+                user!.token = "";
+                
+                UserService.updateUser(user!);
+            }
         }
     }
     
     // 尝试登录
     func tryLogin() {
         // 取出本地token，尝试直接登录
-        let dict = dictionaryDao.findDictionaryBy(type: DictionaryKey.TYPE_DEFAULT, key: DictionaryKey.TOKEN);
-        
-        if dict != nil {
+        let user = UserService.getCurrentUser();
+        if user != nil && !(user!.token?.isEmpty)! {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "IndexController");
             self.navigationController?.pushViewController(vc!, animated: false);
         }
@@ -101,9 +103,9 @@ class LoginController: UIViewController {
         bottomView.addSubview(line);
         
         // 用户名初始化
-        let dict = dictionaryDao.findDictionaryBy(type: DictionaryKey.TYPE_DEFAULT, key: DictionaryKey.USERNAME);
-        if dict != nil {
-            usernameInput.text = dict?.value;
+        let user = UserService.getCurrentUser();
+        if user != nil {
+            usernameInput.text = user!.username;
         }
     }
     
@@ -182,22 +184,11 @@ class LoginController: UIViewController {
         let result = Http.parse(res);
         
         if result.0 {
-            // 删除老的token
-            dictionaryDao.delete(type: DictionaryKey.TYPE_DEFAULT, key: DictionaryKey.TOKEN);
+            let u = result.2["user"] as! NSDictionary;
+            let user = User(u);
+            user.token = result.2["token"] as? String;
             
-            // 保存token
-            let dict = Dictionary();
-            dict.key = DictionaryKey.TOKEN;
-            dict.value = result.2["token"] as? String;
-            dict.type = DictionaryKey.TYPE_DEFAULT;
-            dictionaryDao.save(dict);
-            
-            // 保存手机号
-            let mobile = Dictionary();
-            mobile.key = DictionaryKey.USERNAME;
-            mobile.value = usernameInput.text!;
-            mobile.type = DictionaryKey.TYPE_DEFAULT;
-            dictionaryDao.save(mobile);
+            UserService.saveUser(user);
             
             // 在主线程中操作UI，跳转界面
             DispatchQueue.main.async {

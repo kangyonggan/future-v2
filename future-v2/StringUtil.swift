@@ -30,4 +30,9 @@ class StringUtil: NSObject {
         
         return false
     }
+    
+    // 去除首尾的空格和回车
+    static func trim(_ str: String) -> String {
+        return str.trimmingCharacters(in: .whitespacesAndNewlines);
+    }
 }

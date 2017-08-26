@@ -37,6 +37,7 @@ class RegisterController: UIViewController {
     // 初始化界面
     func initView() {
         // 显示导航条
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .done, target: nil, action: nil)
         self.navigationController?.setNavigationBarHidden(false, animated: false);
         
         // 输入框加下边框

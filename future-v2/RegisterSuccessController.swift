@@ -25,4 +25,12 @@ class RegisterSuccessController: UIViewController {
         // 隐藏返回按钮
         self.navigationItem.hidesBackButton = true;
     }
+    
+    // 跳转到登录界面
+    @IBAction func jumpToLogin(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") as! LoginController;
+        vc.isJump = true;
+        self.navigationController?.show(vc, sender: nil);
+    }
+    
 }
