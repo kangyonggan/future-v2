@@ -64,6 +64,9 @@ class LoginController: UIViewController {
     
     // 初始化界面
     func initView() {
+        // 清除缓存
+        URLCache.shared.removeAllCachedResponses();
+        
         // 修改返回按钮
         self.navigationController?.navigationBar.tintColor = UIColor.white;
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .done, target: nil, action: nil)

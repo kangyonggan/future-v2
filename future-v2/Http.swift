@@ -11,19 +11,29 @@ import Just
 
 class Http: NSObject {
     
-    // 异步get，不带参数
+    // 异步get，不带参数, 有回调
     static func get(_ url: String, callback: @escaping ((HTTPResult) -> Void)) {
         Just.get(UrlConstants.DOMAIN + url, asyncCompletionHandler: callback);
     }
     
-    // 异步post，不带参数
+    // 异步post，不带参数, 有回调
     static func post(_ url: String, callback: @escaping ((HTTPResult) -> Void)) {
         Just.post(UrlConstants.DOMAIN + url, timeout: AppConstants.TIMEOUT, asyncCompletionHandler: callback);
     }
     
-    // 异步post, 带参数
+    // 异步post, 带参数, 有回调
     static func post(_ url: String, params: [String: Any], callback: @escaping ((HTTPResult) -> Void)) {
         Just.post(UrlConstants.DOMAIN + url, data: params, timeout: AppConstants.TIMEOUT, asyncCompletionHandler: callback);
+    }
+    
+    // 异步post, 不带参数, 无回调
+    static func post(_ url: String) {
+        Just.post(UrlConstants.DOMAIN + url, timeout: AppConstants.TIMEOUT);
+    }
+    
+    // 异步post, 带参数, 无回调
+    static func post(_ url: String, params: [String: Any]) {
+        Just.post(UrlConstants.DOMAIN + url, data: params, timeout: AppConstants.TIMEOUT);
     }
     
     // 解析结果
