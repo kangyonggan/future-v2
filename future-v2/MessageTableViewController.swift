@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Just
 
 class MessageTableViewController: UITableViewController {
     
     let CELL_ID = "MessageTableCell";
+    
+    // 加载中菊花
+    var loadingView: UIActivityIndicatorView!;
     
     // 数据
     var messages = [Message]();
@@ -46,19 +50,60 @@ class MessageTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if isLoading() {
+            return;
+        }
+        
+        // 准备数据
         let message = messages[indexPath.row];
+        let user = UserService.getCurrentUser();
         
         // 把此消息标识为已读
         self.updateMessage(message);
         
-        // 跳转消息详情
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MessageDetailController") as! MessageDetailController;
-        vc.message = message;
-        self.navigationController?.pushViewController(vc, animated: true);
+        // 如果是【意见反馈】，就跳转到可以回复的界面
+        if message.type == "意见反馈" {
+            loadingView = ViewUtil.loadingView(self.view);
+            
+            Http.post(UrlConstants.MESSAGE_PRE_REPLY, params: ["id": message.id, "username": user!.username], callback: preReplyCallback)
+        } else {
+            // 跳转消息详情
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "MessageDetailController") as! MessageDetailController;
+            vc.message = message;
+            self.navigationController?.pushViewController(vc, animated: true);
+            
+            // 异步请求服务，把消息更新为已读
+            Http.post(UrlConstants.MESSAGE_READ, params: ["id": message.id, "username": user!.username])
+        }
         
-        // 异步请求服务，把消息更新为已读
-        let user = UserService.getCurrentUser();
-        Http.post(UrlConstants.MESSAGE_READ, params: ["id": message.id, "username": user!.username])
+    }
+    
+    // 欲回复消息的回调
+    func preReplyCallback(res: HTTPResult) {
+        stopLoading();
+        
+        let result = Http.parse(res);
+        
+        if result.0 {
+            let msg = result.2["message"] as! NSDictionary;
+            let message = Message(msg);
+            
+            let replyMsg = result.2["replyMessage"] as? NSDictionary;
+            var replyMessage: Message?;
+            if replyMsg != nil {
+                replyMessage = Message(replyMsg!);
+            }
+            
+            // 跳转消息回复界面
+            DispatchQueue.main.async {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "MessageReplyController") as! MessageReplyController;
+                vc.message = message;
+                vc.replyMessage = replyMessage;
+                self.navigationController?.pushViewController(vc, animated: true);
+            }
+        } else {
+            Toast.showMessage(result.1, onView: self.view);
+        }
     }
     
     // 把消息更新为已读
@@ -69,6 +114,19 @@ class MessageTableViewController: UITableViewController {
                 msg.isRead = true;
                 break;
             }
+        }
+    }
+    
+    // 判断是否正在加载
+    func isLoading() -> Bool {
+        return loadingView != nil && loadingView.isAnimating;
+    }
+    
+    // 停止加载中动画
+    func stopLoading() {
+        DispatchQueue.main.async {
+            self.loadingView.stopAnimating();
+            self.loadingView.removeFromSuperview();
         }
     }
     

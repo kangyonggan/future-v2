@@ -11,6 +11,8 @@
 		1134EC6A1F52967200A28B4C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC691F52967200A28B4C /* Message.swift */; };
 		1134EC6C1F52973A00A28B4C /* MessageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC6B1F52973A00A28B4C /* MessageTableCell.swift */; };
 		1134EC6E1F52A56800A28B4C /* MessageDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC6D1F52A56800A28B4C /* MessageDetailController.swift */; };
+		1134EC701F52DAE100A28B4C /* AdviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC6F1F52DAE100A28B4C /* AdviceController.swift */; };
+		1134EC721F52E7DD00A28B4C /* MessageReplyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC711F52E7DD00A28B4C /* MessageReplyController.swift */; };
 		113666CB1F502CA200DFAC99 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666CA1F502CA200DFAC99 /* SettingController.swift */; };
 		113666CD1F5067E000DFAC99 /* ThemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666CC1F5067E000DFAC99 /* ThemeTableViewController.swift */; };
 		113666CF1F50688900DFAC99 /* ThemeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666CE1F50688900DFAC99 /* ThemeTableCell.swift */; };
@@ -87,6 +89,8 @@
 		1134EC691F52967200A28B4C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1134EC6B1F52973A00A28B4C /* MessageTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableCell.swift; sourceTree = "<group>"; };
 		1134EC6D1F52A56800A28B4C /* MessageDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDetailController.swift; sourceTree = "<group>"; };
+		1134EC6F1F52DAE100A28B4C /* AdviceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdviceController.swift; sourceTree = "<group>"; };
+		1134EC711F52E7DD00A28B4C /* MessageReplyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageReplyController.swift; sourceTree = "<group>"; };
 		113666CA1F502CA200DFAC99 /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		113666CC1F5067E000DFAC99 /* ThemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTableViewController.swift; sourceTree = "<group>"; };
 		113666CE1F50688900DFAC99 /* ThemeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTableCell.swift; sourceTree = "<group>"; };
@@ -376,6 +380,8 @@
 				1134EC671F52961800A28B4C /* MessageTableViewController.swift */,
 				1134EC6B1F52973A00A28B4C /* MessageTableCell.swift */,
 				1134EC6D1F52A56800A28B4C /* MessageDetailController.swift */,
+				1134EC6F1F52DAE100A28B4C /* AdviceController.swift */,
+				1134EC711F52E7DD00A28B4C /* MessageReplyController.swift */,
 			);
 			name = my;
 			sourceTree = "<group>";
@@ -601,6 +607,7 @@
 				1134EC6C1F52973A00A28B4C /* MessageTableCell.swift in Sources */,
 				11F4B5461F4FF24800BE9850 /* BookTableViewController.swift in Sources */,
 				11F4B5261F4EFCED00BE9850 /* ForgotController.swift in Sources */,
+				1134EC721F52E7DD00A28B4C /* MessageReplyController.swift in Sources */,
 				11F4B54E1F5009C400BE9850 /* SectionDetailController.swift in Sources */,
 				11F4B50D1F4EDE3E00BE9850 /* AppConstants.swift in Sources */,
 				11F4B50F1F4EDE6600BE9850 /* UrlConstants.swift in Sources */,
@@ -618,6 +625,7 @@
 				113666E41F51D2D000DFAC99 /* UserInfoController.swift in Sources */,
 				113666E21F51B93E00DFAC99 /* UserDao.swift in Sources */,
 				11F4B51C1F4EE9F300BE9850 /* Dictionary.swift in Sources */,
+				1134EC701F52DAE100A28B4C /* AdviceController.swift in Sources */,
 				11F4B5111F4EE0F600BE9850 /* UserService.swift in Sources */,
 				113666EC1F52516300DFAC99 /* PasswordController.swift in Sources */,
 				11F4B5281F4F00C900BE9850 /* ForgotSuccessController.swift in Sources */,

@@ -21,6 +21,7 @@ class Message: NSObject {
         self.type = message["type"] as? String;
         self.content = message["content"] as? String;
         self.isRead = message["isRead"] as? Bool;
+        self.createdUsername = message["createdUsername"] as? String;
     }
     
     // 消息ID
@@ -37,4 +38,7 @@ class Message: NSObject {
     
     // 是否已读
     var isRead: Bool!;
+    
+    // 创建人
+    var createdUsername: String!;
 }
