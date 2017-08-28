@@ -36,6 +36,11 @@ class Http: NSObject {
         Just.post(UrlConstants.DOMAIN + url, data: params, timeout: AppConstants.TIMEOUT);
     }
     
+    // 文件上传，带参数，带回调
+    static func post(_ url: String, params: [String: Any], file: [String: HTTPFile], callback: @escaping ((HTTPResult) -> Void)) {
+        Just.post(UrlConstants.DOMAIN + url, data: params, files: file, timeout: AppConstants.TIMEOUT, asyncCompletionHandler: callback);
+    }
+    
     // 解析结果
     static func parse(_ result: HTTPResult) -> (Bool, String, NSDictionary) {
         var res: (Bool, String, NSDictionary);

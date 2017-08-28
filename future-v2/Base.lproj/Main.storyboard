@@ -823,7 +823,7 @@
             </objects>
             <point key="canvasLocation" x="2500" y="2050.5247376311845"/>
         </scene>
-        <!--已经反馈-->
+        <!--意见反馈-->
         <scene sceneID="feW-1j-0r8">
             <objects>
                 <viewController id="JGF-7U-sG3" customClass="AdviceController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
@@ -864,7 +864,7 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="已经反馈" id="xHj-Dc-B5N"/>
+                    <navigationItem key="navigationItem" title="意见反馈" id="xHj-Dc-B5N"/>
                     <connections>
                         <outlet property="contenInput" destination="B6N-2N-wGY" id="1o8-Fd-cpQ"/>
                         <outlet property="submitBtn" destination="qP3-sP-id6" id="Yc2-q5-4DW"/>
@@ -984,6 +984,13 @@
                                             <segue destination="bz2-MK-TJm" kind="push" id="pS4-ns-c39"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyl-gC-RVH">
+                                        <rect key="frame" x="0.0" y="8" width="377" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="zUI-OK-8MT" kind="push" id="lGc-BH-Rti"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -1011,7 +1018,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dX6-dk-Php" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3441" y="976"/>
+            <point key="canvasLocation" x="3440.8000000000002" y="975.56221889055485"/>
         </scene>
         <!--设置密码-->
         <scene sceneID="d0n-Ws-g9S">
@@ -1135,16 +1142,28 @@
                             <outlet property="delegate" destination="jYm-q6-5qV" id="ipB-bU-f0U"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="系统消息" id="8ZN-Rt-veN"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="系统消息" id="8ZN-Rt-veN">
+                        <barButtonItem key="rightBarButtonItem" image="is-read" id="K4t-Kb-1P3">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="updateToRead:" destination="jYm-q6-5qV" id="fYV-gz-KM7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="readBtn" destination="K4t-Kb-1P3" id="4Y4-Rr-cRe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSc-Gr-bIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4301.6000000000004" y="1643.9280359820091"/>
         </scene>
-        <!--Message Detail Controller-->
+        <!--消息详情-->
         <scene sceneID="S5S-YL-LJq">
             <objects>
-                <viewController storyboardIdentifier="MessageDetailController" id="YMj-9M-0lE" customClass="MessageDetailController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessageDetailController" id="YMj-9M-0lE" userLabel="消息详情" customClass="MessageDetailController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hwh-AV-sjo"/>
                         <viewControllerLayoutGuide type="bottom" id="twc-fs-obd"/>
@@ -1169,10 +1188,10 @@
             </objects>
             <point key="canvasLocation" x="5112.8000000000002" y="1643.9280359820091"/>
         </scene>
-        <!--Message Reply Controller-->
+        <!--回复消息-->
         <scene sceneID="Mfe-EW-FEv">
             <objects>
-                <viewController storyboardIdentifier="MessageReplyController" id="pSx-zt-ylS" customClass="MessageReplyController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessageReplyController" id="pSx-zt-ylS" userLabel="回复消息" customClass="MessageReplyController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SEu-9G-vR8"/>
                         <viewControllerLayoutGuide type="bottom" id="joe-QS-mqi"/>
@@ -1323,6 +1342,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHU-57-d9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5114" y="976"/>
+        </scene>
+        <!--上传头像-->
+        <scene sceneID="MX2-Tq-nbh">
+            <objects>
+                <viewController id="zUI-OK-8MT" customClass="AvatarUploadController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TNl-xs-caf"/>
+                        <viewControllerLayoutGuide type="bottom" id="vxd-bG-lH2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zxy-1e-nIo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="600" translatesAutoresizingMaskIntoConstraints="NO" id="jot-Hx-XvD">
+                                <rect key="frame" x="67" y="28" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="请上传 png、gif、jpg 格式的图片文件，文件大小不能超过10MB。建议上传一张 240*240 像素或等比例的图片。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGJ-m9-Ohz">
+                                <rect key="frame" x="31" y="276" width="312" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaP-UC-Udu">
+                                <rect key="frame" x="33" y="360" width="310" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99858456849999999" green="0.3324358463" blue="0.21369606259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="开始上传 ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submit:" destination="zUI-OK-8MT" eventType="touchUpInside" id="qnc-X7-QtC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slx-eb-fLf">
+                                <rect key="frame" x="67" y="28" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="selectImage:" destination="zUI-OK-8MT" eventType="touchUpInside" id="k1Y-hG-BgC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="上传头像" id="LWW-sb-siN"/>
+                    <connections>
+                        <outlet property="avatarImage" destination="jot-Hx-XvD" id="tlK-SR-Jhe"/>
+                        <outlet property="submitBtn" destination="YaP-UC-Udu" id="b3r-5t-Ql8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rnd-7l-Zna" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5925.6000000000004" y="968.36581709145435"/>
         </scene>
         <!--找回密码成功-->
         <scene sceneID="nrN-6D-hzD">
@@ -1639,7 +1712,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ckh-nd-uDj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="614"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </webView>
@@ -1911,9 +1984,11 @@
     </scenes>
     <resources>
         <image name="120" width="120" height="120"/>
+        <image name="600" width="600" height="600"/>
         <image name="book" width="20" height="20"/>
         <image name="favorite" width="20" height="20"/>
         <image name="index" width="20" height="20"/>
+        <image name="is-read" width="20" height="20"/>
         <image name="my" width="20" height="20"/>
         <image name="no-cover" width="100" height="125"/>
         <image name="other" width="20" height="20"/>

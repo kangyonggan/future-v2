@@ -27,8 +27,6 @@ class MyIndexController: UIViewController {
         super.viewDidLoad()
         
         initView();
-        
-        initData();
     }
     
     // 初始化界面
@@ -65,8 +63,9 @@ class MyIndexController: UIViewController {
     }
     
     func initData() {
-        // 当前用户数据
-        let user = UserService.getCurrentUser()!;
+        // 更新个人信息
+        user = UserService.getCurrentUser();
+        parent?.navigationItem.title = "我的";
         realnameLabel.text = user.realname;
         usernameLabel.text = user.username;
         
@@ -93,10 +92,7 @@ class MyIndexController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         
-        // 更新个人信息
-        parent?.navigationItem.title = "我的";
-        let user = UserService.getCurrentUser()!;
-        realnameLabel.text = user.realname;
+        initData();
         
         // 查询未读消息数量
         messageCountLabel.backgroundColor = UIColor.white;

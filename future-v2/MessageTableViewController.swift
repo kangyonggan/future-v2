@@ -19,11 +19,26 @@ class MessageTableViewController: UITableViewController {
     // 数据
     var messages = [Message]();
     
+    // 删除的行
+    var indexPath: IndexPath!;
+    
+    @IBOutlet weak var readBtn: UIBarButtonItem!
+    
+    // 是否有未读消息
+    var hasUnRead = false;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .done, target: nil, action: nil)
         
+        // 是否禁用“标记为已读按钮”
+        for msg in messages {
+            if !msg.isRead {
+                hasUnRead = true;
+                break;
+            }
+        }
     }
     
     // MARK: - Table View
@@ -47,6 +62,54 @@ class MessageTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true;
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deleteRow(indexPath);
+        }
+    }
+    
+    // 删除数据源
+    func deleteRow(_ indexPath: IndexPath) {
+        self.indexPath = indexPath;
+        if isLoading() {
+            return;
+        }
+        
+        if messages[indexPath.row].type == "意见反馈" {
+            Toast.showMessage("意见反馈不能删除", onView: self.view);
+            return;
+        }
+        
+        loadingView = ViewUtil.loadingView(self.view);
+        let user = UserService.getCurrentUser();
+        
+        Http.post(UrlConstants.MESSAGE_DELETE, params: ["username": user!.username, "messageId": messages[indexPath.row].id], callback: deleteCallback)
+    }
+    
+    // 删除消息的回调
+    func deleteCallback(res: HTTPResult) {
+        stopLoading();
+        
+        let result = Http.parse(res);
+        
+        if result.0 {
+            DispatchQueue.main.async {
+                for i in 0..<self.messages.count {
+                    if i == self.indexPath.row {
+                        self.messages.remove(at: i);
+                        break;
+                    }
+                }
+                
+                // 必须先删除数据源，否则报错
+                self.tableView.deleteRows(at: [self.indexPath], with: .fade)
+            }
+        } else {
+            Toast.showMessage(result.1, onView: self.view)
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -106,12 +169,51 @@ class MessageTableViewController: UITableViewController {
         }
     }
     
+    // 把消息全部更新为已读
+    @IBAction func updateToRead(_ sender: Any) {
+        if isLoading() {
+            return;
+        }
+        
+        if !hasUnRead {
+            Toast.showMessage("消息已经全部标记为已读", onView: self.view)
+            return;
+        }
+        
+        loadingView = ViewUtil.loadingView(self.view);
+        let user = UserService.getCurrentUser();
+        
+        Http.post(UrlConstants.MESSAGE_ALLREAD, params: ["username": user!.username], callback: readAllCallback)
+    }
+    
+    // 全部标记为已读的回调
+    func readAllCallback(res: HTTPResult) {
+        stopLoading();
+        
+        let result = Http.parse(res);
+        
+        if result.0 {
+            DispatchQueue.main.async {
+                self.hasUnRead = false;
+            
+                for msg in self.messages {
+                    msg.isRead = true;
+                }
+            
+                self.tableView.reloadData();
+            }
+            Toast.showMessage("消息全部标记为已读", onView: self.view);
+        } else {
+            Toast.showMessage(result.1, onView: self.view);
+        }
+    }
+    
     // 把消息更新为已读
     func updateMessage(_ message: Message) {
         for msg in messages {
             if msg.id == message.id {
-                self.tableView.reloadData();
                 msg.isRead = true;
+                self.tableView.reloadData();
                 break;
             }
         }

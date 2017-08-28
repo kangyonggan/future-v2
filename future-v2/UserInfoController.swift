@@ -20,20 +20,12 @@ class UserInfoController: UIViewController {
         super.viewDidLoad();
         
         initView();
-        
-        initData();
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         
-        let user = UserService.getCurrentUser()!;
-        realnameLabel.text = user.realname;
-        if user.email!.isEmpty {
-            emailLabel.text = "未填写";
-        } else {
-            emailLabel.text = user.email;
-        }
+        initData();
         
     }
     
@@ -53,6 +45,13 @@ class UserInfoController: UIViewController {
         
         // 加载头像 异步加载
         Http.get(user.largeAvatar, callback: avatarCallback);
+        
+        realnameLabel.text = user.realname;
+        if user.email!.isEmpty {
+            emailLabel.text = "未填写";
+        } else {
+            emailLabel.text = user.email;
+        }
     }
     
     // 加载头像的回调
@@ -72,9 +71,23 @@ class UserInfoController: UIViewController {
     
     // 退出登录
     @IBAction func logout(_ sender: Any) {
+        let alert = UIAlertController(title: "退出登录后不会删除您的数据，下次登录后数据仍然会存在。", message: nil, preferredStyle: .actionSheet);
+        let cancelBtn = UIAlertAction(title: "取消", style: .cancel, handler: nil);
+        
+        let okBtn = UIAlertAction(title: "退出登录", style: .destructive, handler: logoutOk)
+        
+        alert.addAction(cancelBtn);
+        alert.addAction(okBtn);
+        
+        self.present(alert, animated: true, completion: nil);
+    }
+    
+    // 确定退出
+    func logoutOk(_ action: UIAlertAction) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") as! LoginController;
         vc.isJump = true;
         self.navigationController?.show(vc, sender: nil);
+        
     }
     
     

@@ -12,8 +12,8 @@ import Foundation
 class UrlConstants: NSObject {
     
     // 域名
-//    static let DOMAIN = "https://kangyonggan.com/";
-    static let DOMAIN = "http://127.0.0.1:8080/";
+    static let DOMAIN = "https://kangyonggan.com/";
+//    static let DOMAIN = "http://127.0.0.1:8080/";
     
     // 手机端前缀
     static let MOBILE = "mobile/";
@@ -60,6 +60,9 @@ class UrlConstants: NSObject {
     // 修改用户信息
     static let USER_UPDATE = MOBILE + "user/update";
     
+    // 上传头像
+    static let USER_AVATAR = MOBILE + "user/avatar";
+    
     // 未读消息数量
     static let MESSAGE_COUNT = MOBILE + "message/count";
     
@@ -68,6 +71,9 @@ class UrlConstants: NSObject {
     
     // 消息已读
     static let MESSAGE_READ = MOBILE + "message/read";
+    
+    // 消息全部已读
+    static let MESSAGE_ALLREAD = MOBILE + "message/allread";
     
     // 消息建议
     static let MESSAGE_ADVICE = MOBILE + "message/advice";
@@ -80,5 +86,8 @@ class UrlConstants: NSObject {
     
     // 查询消息
     static let MESSAGE = MOBILE + "message/";
+    
+    // 删除消息
+    static let MESSAGE_DELETE = MOBILE + "message/delete";
     
 }
