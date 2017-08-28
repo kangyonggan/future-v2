@@ -30,6 +30,8 @@ class BookIndexController: UIViewController {
     // 加载中菊花
     var loadingView: UIActivityIndicatorView!;
     
+    var isRefresh = false;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -98,6 +100,7 @@ class BookIndexController: UIViewController {
         let result = Http.parse(res);
         
         if result.0 {
+            self.categories = [];
             let categories = result.2["categories"] as! NSArray;
             DispatchQueue.main.async {
                 for c in categories {
@@ -110,7 +113,13 @@ class BookIndexController: UIViewController {
                 // 渲染
                 self.categoryCollectionView.loadData(self.categories);
             }
+            
+            if isRefresh {
+                Toast.showMessage("刷新分类成功", onView: self.view);
+            }
         }
+        
+        isRefresh = false;
     }
     
     // 初始化界面
@@ -196,6 +205,13 @@ class BookIndexController: UIViewController {
             vc.refreshNav("搜索结果")
             self.parent?.navigationController?.pushViewController(vc, animated: true);
         }
+    }
+    
+    // 刷新分类
+    @IBAction func refreshCategory(_ sender: Any) {
+        // 使用异步请求
+        isRefresh = true;
+        Http.post(UrlConstants.CATEGORY_ALL, callback: categoryCallback);
     }
     
     // 加载更多推荐小说

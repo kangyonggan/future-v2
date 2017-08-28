@@ -343,7 +343,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="站长推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmS-sw-jjg">
-                                <rect key="frame" x="8" y="262" width="70" height="21"/>
+                                <rect key="frame" x="8" y="259" width="70" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -443,7 +443,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我的收藏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8a-4m-ujL">
-                                <rect key="frame" x="8" y="418" width="70" height="21"/>
+                                <rect key="frame" x="8" y="416" width="70" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -459,6 +459,17 @@
                                 <state key="disabled" title=" "/>
                                 <connections>
                                     <action selector="loadMoreFavoriteBooks:" destination="Dyz-KW-XKZ" eventType="touchUpInside" id="hG7-XJ-TAt"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="refresh" translatesAutoresizingMaskIntoConstraints="NO" id="L9c-PK-Hfs">
+                                <rect key="frame" x="344" y="71" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90e-a6-wwx">
+                                <rect key="frame" x="343" y="66" width="23" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="refreshCategory:" destination="Dyz-KW-XKZ" eventType="touchUpInside" id="grj-cz-4ls"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1993,6 +2004,7 @@
         <image name="no-cover" width="100" height="125"/>
         <image name="other" width="20" height="20"/>
         <image name="point" width="120" height="120"/>
+        <image name="refresh" width="120" height="120"/>
         <image name="right" width="120" height="120"/>
         <image name="right-white" width="120" height="120"/>
         <image name="selected" width="120" height="120"/>
