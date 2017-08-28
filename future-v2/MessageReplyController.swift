@@ -9,7 +9,7 @@
 import UIKit
 import Just
 
-class MessageReplyController: UIViewController {
+class MessageReplyController: UIViewController, UIWebViewDelegate {
 
     // 控件
     @IBOutlet weak var webView: UIWebView!
@@ -32,8 +32,14 @@ class MessageReplyController: UIViewController {
         initData();
     }
     
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        webView.stringByEvaluatingJavaScript(from: "document.getElementsByTagName('body')[0].style.webkitTextFillColor='#555555'");
+    }
+    
     // 初始化界面
     func initView() {
+        webView.delegate = self;
+        
         if replyMessage != nil {
             submitBtn.isEnabled = false;
             submitBtn.backgroundColor = UIColor.lightGray;

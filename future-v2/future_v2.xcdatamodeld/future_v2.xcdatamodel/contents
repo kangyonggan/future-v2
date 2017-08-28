@@ -5,6 +5,7 @@
         <attribute name="categoryCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="code" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="createdTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="descp" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isFinished" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -37,7 +38,7 @@
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="TBook" positionX="-54" positionY="18" width="128" height="225"/>
+        <element name="TBook" positionX="-54" positionY="18" width="128" height="240"/>
         <element name="TDictionary" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="TSection" positionX="-36" positionY="108" width="128" height="135"/>
         <element name="TUser" positionX="-45" positionY="90" width="128" height="150"/>

@@ -35,6 +35,7 @@ class BookDao: NSObject {
         newEntity.setValue(book.newSectionTitle, forKey: "newSectionTitle");
         newEntity.setValue(book.lastSectionCode, forKey: "lastSectionCode");
         newEntity.setValue(book.isFavorite, forKey: "isFavorite");
+        newEntity.setValue(Date(), forKey: "createdTime");
         
         do {
             try managedObjectContext.save()
@@ -71,7 +72,14 @@ class BookDao: NSObject {
             request.predicate = predicate;
             request.fetchOffset = 0;
             request.fetchLimit = limit;
+            
+            // 倒序
+            var sorts = [NSSortDescriptor]();
+            sorts.append(NSSortDescriptor(key: "createdTime", ascending: false));
+            request.sortDescriptors = sorts;
+            
             let rows = try managedObjectContext.fetch(request) as! [NSManagedObject];
+            
             
             for row in rows {
                 let dict = Book();

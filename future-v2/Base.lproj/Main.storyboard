@@ -1185,6 +1185,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qBT-eh-Wdh">
                                 <rect key="frame" x="0.0" y="281" width="375" height="167"/>
