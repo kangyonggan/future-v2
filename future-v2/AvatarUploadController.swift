@@ -39,22 +39,7 @@ class AvatarUploadController: UIViewController, UIImagePickerControllerDelegate,
         submitBtn.layer.masksToBounds = true;
         
         // 加载头像 异步加载
-        Http.get(user.largeAvatar, callback: avatarCallback);
-    }
-    
-    // 加载头像的回调
-    func avatarCallback(res: HTTPResult) {
-        if res.ok {
-            let img = UIImage(data: res.content!)
-            DispatchQueue.main.async {
-                self.avatarImage.image = img;
-            }
-        } else {
-            let img = UIImage(named: "600");
-            DispatchQueue.main.async {
-                self.avatarImage.image = img;
-            }
-        }
+        CacheImage().load(named: user.largeAvatar, to: avatarImage, withDefault: "600");
     }
     
     // 选择头像
@@ -82,11 +67,7 @@ class AvatarUploadController: UIViewController, UIImagePickerControllerDelegate,
         
         // 将选择的图片保存到Document目录下
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage;
-        let fileManager = FileManager.default;
-        let rootPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
-        let filePath = "\(rootPath)/avatar.png";
         imageData = UIImagePNGRepresentation(image);
-        fileManager.createFile(atPath: filePath, contents: imageData, attributes: nil)
         
         // 预览
         avatarImage.image = image;

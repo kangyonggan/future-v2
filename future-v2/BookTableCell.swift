@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Just
 
 class BookTableCell: UITableViewCell {
     
@@ -34,22 +33,7 @@ class BookTableCell: UITableViewCell {
         statusLabel.layer.cornerRadius = 3;
         
         // 异步加载封面
-        Http.get(book.picUrl, callback: callback);
-    }
-    
-    // 加载封面的回调
-    func callback(res: HTTPResult) {
-        if res.ok {
-            let img = UIImage(data: res.content!)
-            DispatchQueue.main.async {
-                self.coverImage.image = img;
-            }
-        } else {
-            let img = UIImage(named: AppConstants.NO_COVER_IMAGE);
-            DispatchQueue.main.async {
-                self.coverImage.image = img;
-            }
-        }
+        CacheImage().load(named: book.picUrl, to: coverImage, withDefault: AppConstants.NO_COVER_IMAGE);
     }
     
     

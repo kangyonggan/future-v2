@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Just
 
 class UserInfoController: UIViewController {
     
@@ -44,28 +43,13 @@ class UserInfoController: UIViewController {
         usernameLabel.text = user.username;
         
         // 加载头像 异步加载
-        Http.get(user.largeAvatar, callback: avatarCallback);
+        CacheImage().load(named: user.largeAvatar, to: avatarImage, withDefault: "120");
         
         realnameLabel.text = user.realname;
         if user.email!.isEmpty {
             emailLabel.text = "未填写";
         } else {
             emailLabel.text = user.email;
-        }
-    }
-    
-    // 加载头像的回调
-    func avatarCallback(res: HTTPResult) {
-        if res.ok {
-            let img = UIImage(data: res.content!)
-            DispatchQueue.main.async {
-                self.avatarImage.image = img;
-            }
-        } else {
-            let img = UIImage(named: "120");
-            DispatchQueue.main.async {
-                self.avatarImage.image = img;
-            }
         }
     }
     

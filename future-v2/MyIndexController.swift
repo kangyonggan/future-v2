@@ -70,23 +70,7 @@ class MyIndexController: UIViewController {
         usernameLabel.text = user.username;
         
         // 加载头像 异步加载
-        Http.get(user.largeAvatar, callback: avatarCallback);
-        
-    }
-    
-    // 加载头像的回调
-    func avatarCallback(res: HTTPResult) {
-        if res.ok {
-            let img = UIImage(data: res.content!)
-            DispatchQueue.main.async {
-                self.avatarImage.image = img;
-            }
-        } else {
-            let img = UIImage(named: "120");
-            DispatchQueue.main.async {
-                self.avatarImage.image = img;
-            }
-        }
+        CacheImage().load(named: user.largeAvatar, to: avatarImage, withDefault: "120");
     }
     
     override func viewWillAppear(_ animated: Bool) {

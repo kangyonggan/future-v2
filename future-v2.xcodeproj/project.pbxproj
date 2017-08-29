@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111DBBBB1F5563040087512B /* PhotoAlbumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBBA1F5563040087512B /* PhotoAlbumUtil.swift */; };
+		111DBBBD1F5574480087512B /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBBC1F5574480087512B /* FileUtil.swift */; };
+		111DBBBF1F5576D50087512B /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBBE1F5576D50087512B /* CacheImage.swift */; };
 		1134EC681F52961800A28B4C /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC671F52961800A28B4C /* MessageTableViewController.swift */; };
 		1134EC6A1F52967200A28B4C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC691F52967200A28B4C /* Message.swift */; };
 		1134EC6C1F52973A00A28B4C /* MessageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC6B1F52973A00A28B4C /* MessageTableCell.swift */; };
@@ -21,6 +24,7 @@
 		1134EC801F550D8B00A28B4C /* HomeIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC7F1F550D8B00A28B4C /* HomeIndexController.swift */; };
 		1134EC821F5511DC00A28B4C /* QrScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC811F5511DC00A28B4C /* QrScanController.swift */; };
 		1134EC841F55185D00A28B4C /* QrScanResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC831F55185D00A28B4C /* QrScanResultController.swift */; };
+		1134EC881F553E6500A28B4C /* QrGenerateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC871F553E6500A28B4C /* QrGenerateController.swift */; };
 		113666CB1F502CA200DFAC99 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666CA1F502CA200DFAC99 /* SettingController.swift */; };
 		113666CD1F5067E000DFAC99 /* ThemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666CC1F5067E000DFAC99 /* ThemeTableViewController.swift */; };
 		113666CF1F50688900DFAC99 /* ThemeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666CE1F50688900DFAC99 /* ThemeTableCell.swift */; };
@@ -93,6 +97,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		111DBBBA1F5563040087512B /* PhotoAlbumUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumUtil.swift; sourceTree = "<group>"; };
+		111DBBBC1F5574480087512B /* FileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
+		111DBBBE1F5576D50087512B /* CacheImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
 		1134EC671F52961800A28B4C /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		1134EC691F52967200A28B4C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1134EC6B1F52973A00A28B4C /* MessageTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableCell.swift; sourceTree = "<group>"; };
@@ -107,6 +114,7 @@
 		1134EC7F1F550D8B00A28B4C /* HomeIndexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeIndexController.swift; sourceTree = "<group>"; };
 		1134EC811F5511DC00A28B4C /* QrScanController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrScanController.swift; sourceTree = "<group>"; };
 		1134EC831F55185D00A28B4C /* QrScanResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrScanResultController.swift; sourceTree = "<group>"; };
+		1134EC871F553E6500A28B4C /* QrGenerateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrGenerateController.swift; sourceTree = "<group>"; };
 		113666CA1F502CA200DFAC99 /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		113666CC1F5067E000DFAC99 /* ThemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTableViewController.swift; sourceTree = "<group>"; };
 		113666CE1F50688900DFAC99 /* ThemeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTableCell.swift; sourceTree = "<group>"; };
@@ -203,6 +211,7 @@
 				1134EC7C1F54FB9000A28B4C /* ToolCollectionCell.swift */,
 				1134EC811F5511DC00A28B4C /* QrScanController.swift */,
 				1134EC831F55185D00A28B4C /* QrScanResultController.swift */,
+				1134EC871F553E6500A28B4C /* QrGenerateController.swift */,
 			);
 			name = tool;
 			sourceTree = "<group>";
@@ -323,6 +332,9 @@
 				11F4B5121F4EE21000BE9850 /* StringUtil.swift */,
 				11F4B5141F4EE28900BE9850 /* Toast.swift */,
 				11F4B5161F4EE64100BE9850 /* Http.swift */,
+				111DBBBA1F5563040087512B /* PhotoAlbumUtil.swift */,
+				111DBBBC1F5574480087512B /* FileUtil.swift */,
+				111DBBBE1F5576D50087512B /* CacheImage.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -654,6 +666,7 @@
 				11F4B50F1F4EDE6600BE9850 /* UrlConstants.swift in Sources */,
 				113666CF1F50688900DFAC99 /* ThemeTableCell.swift in Sources */,
 				11F4B5201F4EEA9600BE9850 /* DictionaryKey.swift in Sources */,
+				111DBBBD1F5574480087512B /* FileUtil.swift in Sources */,
 				11F4B52B1F4FB81B00BE9850 /* BookIndexController.swift in Sources */,
 				1134EC821F5511DC00A28B4C /* QrScanController.swift in Sources */,
 				113666E61F51D84E00DFAC99 /* RealnameController.swift in Sources */,
@@ -664,12 +677,15 @@
 				11F4B5221F4EF02200BE9850 /* RegisterController.swift in Sources */,
 				11F4B5171F4EE64100BE9850 /* Http.swift in Sources */,
 				113666CD1F5067E000DFAC99 /* ThemeTableViewController.swift in Sources */,
+				1134EC881F553E6500A28B4C /* QrGenerateController.swift in Sources */,
+				111DBBBB1F5563040087512B /* PhotoAlbumUtil.swift in Sources */,
 				113666E41F51D2D000DFAC99 /* UserInfoController.swift in Sources */,
 				113666E21F51B93E00DFAC99 /* UserDao.swift in Sources */,
 				11F4B51C1F4EE9F300BE9850 /* Dictionary.swift in Sources */,
 				1134EC701F52DAE100A28B4C /* AdviceController.swift in Sources */,
 				11F4B5111F4EE0F600BE9850 /* UserService.swift in Sources */,
 				113666EC1F52516300DFAC99 /* PasswordController.swift in Sources */,
+				111DBBBF1F5576D50087512B /* CacheImage.swift in Sources */,
 				11F4B5281F4F00C900BE9850 /* ForgotSuccessController.swift in Sources */,
 				11F4B5081F4ECF8C00BE9850 /* ViewUtil.swift in Sources */,
 				1134EC761F541BD700A28B4C /* AboutFunctionController.swift in Sources */,
@@ -851,6 +867,7 @@
 			baseConfigurationReference = E43749B1A13E00AD300C5FAD /* Pods-future-v2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_ACTIVITY_MODE = "";
 				DEVELOPMENT_TEAM = ZAU45PX3J5;
 				INFOPLIST_FILE = "future-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -865,6 +882,7 @@
 			baseConfigurationReference = 9A38D34A2E62A5CCD6BDADEF /* Pods-future-v2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_ACTIVITY_MODE = "";
 				DEVELOPMENT_TEAM = ZAU45PX3J5;
 				INFOPLIST_FILE = "future-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Just
 
 class HotCollectionCell: UICollectionViewCell {
     
@@ -18,25 +17,9 @@ class HotCollectionCell: UICollectionViewCell {
     // 初始化数据
     func initData(_ book: Book) {
         // 封面 异步加载
-        Http.get(book.picUrl, callback: callback);
-        
+        CacheImage().load(named: book.picUrl, to: imageView, withDefault: AppConstants.NO_COVER_IMAGE);
+
         // 书名
         nameLabel.text = book.name;
     }
-    
-    // 加载封面的回调
-    func callback(res: HTTPResult) {
-        if res.ok {
-            let img = UIImage(data: res.content!)
-            DispatchQueue.main.async {
-                self.imageView.image = img;
-            }
-        } else {
-            let img = UIImage(named: AppConstants.NO_COVER_IMAGE);
-            DispatchQueue.main.async {
-                self.imageView.image = img;
-            }
-        }
-    }
-    
 }

@@ -61,10 +61,10 @@ class AppConstants: NSObject {
     static func tools() -> [(String, String, String)] {
         var tools = [(String, String, String)]()
         tools.append(("scancode", "QrScanController", "扫描二维码"));
-        tools.append(("qrcode", "", "生成二维码"));
+        tools.append(("qrcode", "QrGenerateController", "生成二维码"));
+        tools.append(("yinyang", "", "算一卦"));
         tools.append(("idcard", "", "生成身份证"));
         tools.append(("checkidcard", "", "身份证校验"));
-        tools.append(("yinyang", "", "算一卦"));
         
         return tools;
     }
