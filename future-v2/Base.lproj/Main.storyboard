@@ -493,7 +493,7 @@
         <!--首页-->
         <scene sceneID="wfD-T0-nNE">
             <objects>
-                <viewController id="cjZ-Mn-Al9" sceneMemberID="viewController">
+                <viewController id="cjZ-Mn-Al9" customClass="HomeIndexController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DFH-hA-jUV"/>
                         <viewControllerLayoutGuide type="bottom" id="I6G-Ax-pJb"/>
@@ -512,7 +512,7 @@
         <!--首页-->
         <scene sceneID="bXj-eL-96T">
             <objects>
-                <tabBarController storyboardIdentifier="IndexController" title="首页" id="nzr-oY-VFn" customClass="IndexController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" title="首页" id="nzr-oY-VFn" customClass="TabBarController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="I9n-In-jd0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -537,7 +537,7 @@
         <!--综合-->
         <scene sceneID="M5n-dA-8PS">
             <objects>
-                <viewController id="KeS-zS-h8v" sceneMemberID="viewController">
+                <viewController id="KeS-zS-h8v" customClass="ToolIndexController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pFV-wr-B7u"/>
                         <viewControllerLayoutGuide type="bottom" id="633-Wd-L5F"/>
@@ -545,13 +545,149 @@
                     <view key="view" contentMode="scaleToFill" id="9YQ-px-cSo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="suT-pC-4s7" customClass="ToolCollectionView" customModule="future_v2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="zcb-vp-Lsp">
+                                    <size key="itemSize" width="110" height="110"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ToolCollectionCell" id="rlt-As-gEo" customClass="ToolCollectionCell" customModule="future_v2" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="15" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="wyf-BC-3uW">
+                                                    <rect key="frame" x="20" y="10" width="70" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="生成二维码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfy-eK-Trv">
+                                                    <rect key="frame" x="0.0" y="83" width="110" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="imageView" destination="wyf-BC-3uW" id="Qn0-Za-Vhg"/>
+                                            <outlet property="nameLabel" destination="Yfy-eK-Trv" id="akl-h1-hXz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="综合" image="other" id="H1H-3e-Uwx"/>
+                    <tabBarItem key="tabBarItem" title="综合" image="tool" id="H1H-3e-Uwx"/>
+                    <connections>
+                        <outlet property="toolCollectionView" destination="suT-pC-4s7" id="m1M-mv-ZGr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVd-5v-FfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="474"/>
+            <point key="canvasLocation" x="2500" y="473.6131934032984"/>
+        </scene>
+        <!--扫描二维码-->
+        <scene sceneID="c4L-5g-2SH">
+            <objects>
+                <viewController storyboardIdentifier="QrScanController" id="faR-u1-d4p" customClass="QrScanController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S2C-tK-cn5"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZnD-l7-Dhj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WyM-Dj-JLl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="将二维码或条形码放入框如即可扫描" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hr-DB-yLG">
+                                <rect key="frame" x="48" y="158" width="278" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="扫描二维码" id="I78-sQ-SBw">
+                        <barButtonItem key="rightBarButtonItem" title="相册" id="Npv-FI-03F">
+                            <connections>
+                                <action selector="scanPhoto:" destination="faR-u1-d4p" id="yj3-QB-W8Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F6l-U5-z8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3456.8000000000002" y="453.82308845577217"/>
+        </scene>
+        <!--扫描结果-->
+        <scene sceneID="e3I-o5-12M">
+            <objects>
+                <viewController storyboardIdentifier="QrScanResultController" id="eGd-I2-Gti" userLabel="扫描结果" customClass="QrScanResultController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C5s-47-iwj"/>
+                        <viewControllerLayoutGuide type="bottom" id="cjv-go-8n1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gTz-wd-MD7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="扫码内容非未来提供，请谨慎使用" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4e-fL-emP">
+                                <rect key="frame" x="57" y="565" width="260" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="扫描到的内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Buv-my-Fz6">
+                                <rect key="frame" x="135" y="83" width="104" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qah-eB-aPT">
+                                <rect key="frame" x="57" y="120" width="260" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDe-dg-otG">
+                                <rect key="frame" x="141" y="340" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="一键复制内容">
+                                    <color key="titleColor" red="0.99858456849999999" green="0.3324358463" blue="0.21369606259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyResult:" destination="eGd-I2-Gti" eventType="touchUpInside" id="Esf-2X-IvD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="扫描二维码" id="UsY-FI-sdX" userLabel="扫描结果">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="dmN-kX-KGK">
+                            <connections>
+                                <action selector="share:" destination="eGd-I2-Gti" id="C0y-pG-DX3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="resultView" destination="Qah-eB-aPT" id="U52-bh-8bc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6UI-op-Umq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4357.6000000000004" y="452.92353823088462"/>
         </scene>
         <!--我的-->
         <scene sceneID="jTD-hE-0GD">
@@ -819,6 +955,13 @@
                                         <rect key="frame" x="347" y="116" width="20" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H25-3I-ZxG">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="5QF-66-46U" kind="push" id="ng2-T9-icV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -833,6 +976,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVz-vM-S2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2500" y="2050.5247376311845"/>
+        </scene>
+        <!--功能介绍-->
+        <scene sceneID="B3J-Bb-fx6">
+            <objects>
+                <viewController id="5QF-66-46U" customClass="AboutFunctionController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BtT-Aw-y1j"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lha-zN-UxH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hpn-Fd-auk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0T-Ku-G4l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="606"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="功能介绍" id="pbX-li-Ba2"/>
+                    <connections>
+                        <outlet property="webView" destination="f0T-Ku-G4l" id="3LC-Jd-DfE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sl4-n7-GQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="2825"/>
         </scene>
         <!--意见反馈-->
         <scene sceneID="feW-1j-0r8">
@@ -883,7 +1056,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lNR-Uu-CsU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3447.1999999999998" y="2369.8650674662672"/>
+            <point key="canvasLocation" x="3441" y="2656"/>
         </scene>
         <!--个人信息-->
         <scene sceneID="oVx-OI-Zqj">
@@ -1029,7 +1202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dX6-dk-Php" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3440.8000000000002" y="975.56221889055485"/>
+            <point key="canvasLocation" x="3441" y="1191"/>
         </scene>
         <!--设置密码-->
         <scene sceneID="d0n-Ws-g9S">
@@ -1099,7 +1272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xh9-PF-a5I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3440.8000000000002" y="1643.9280359820091"/>
+            <point key="canvasLocation" x="3441" y="1909"/>
         </scene>
         <!--系统消息-->
         <scene sceneID="FzF-or-8hl">
@@ -1169,7 +1342,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSc-Gr-bIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4301.6000000000004" y="1643.9280359820091"/>
+            <point key="canvasLocation" x="4302" y="1908"/>
         </scene>
         <!--消息详情-->
         <scene sceneID="S5S-YL-LJq">
@@ -1197,7 +1370,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNO-MP-oky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5112.8000000000002" y="1643.9280359820091"/>
+            <point key="canvasLocation" x="5113" y="1907"/>
         </scene>
         <!--回复消息-->
         <scene sceneID="Mfe-EW-FEv">
@@ -1256,7 +1429,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTc-d7-sdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5941.6000000000004" y="1643.9280359820091"/>
+            <point key="canvasLocation" x="5926" y="1886"/>
         </scene>
         <!--设置名字-->
         <scene sceneID="Hcn-au-FeY">
@@ -1303,7 +1476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rTN-6x-bDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4303" y="976"/>
+            <point key="canvasLocation" x="4302" y="1191"/>
         </scene>
         <!--设置邮箱-->
         <scene sceneID="km3-1u-Yp2">
@@ -1352,7 +1525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHU-57-d9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5114" y="976"/>
+            <point key="canvasLocation" x="5138" y="1191"/>
         </scene>
         <!--上传头像-->
         <scene sceneID="MX2-Tq-nbh">
@@ -1406,7 +1579,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnd-7l-Zna" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5925.6000000000004" y="968.36581709145435"/>
+            <point key="canvasLocation" x="5926" y="1174"/>
         </scene>
         <!--找回密码成功-->
         <scene sceneID="nrN-6D-hzD">
@@ -2002,12 +2175,13 @@
         <image name="is-read" width="20" height="20"/>
         <image name="my" width="20" height="20"/>
         <image name="no-cover" width="100" height="125"/>
-        <image name="other" width="20" height="20"/>
         <image name="point" width="120" height="120"/>
+        <image name="qrcode" width="120" height="120"/>
         <image name="refresh" width="120" height="120"/>
         <image name="right" width="120" height="120"/>
         <image name="right-white" width="120" height="120"/>
         <image name="selected" width="120" height="120"/>
         <image name="success" width="120" height="120"/>
+        <image name="tool" width="20" height="20"/>
     </resources>
 </document>

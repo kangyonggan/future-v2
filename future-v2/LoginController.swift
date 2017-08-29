@@ -50,7 +50,7 @@ class LoginController: UIViewController {
         // 取出本地token，尝试直接登录
         let user = UserService.getCurrentUser();
         if user != nil && !(user!.token?.isEmpty)! {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "IndexController");
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController");
             self.navigationController?.pushViewController(vc!, animated: false);
         }
     }
@@ -195,7 +195,7 @@ class LoginController: UIViewController {
             
             // 在主线程中操作UI，跳转界面
             DispatchQueue.main.async {
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "IndexController");
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController");
                 self.navigationController?.pushViewController(vc!, animated: true);
             }
         } else {

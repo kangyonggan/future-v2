@@ -20,7 +20,7 @@ class AppConstants: NSObject {
     // 没有封面
     static let NO_COVER_IMAGE = "no-cover";
     
-    // 主题
+    // 小说主题
     static func themes() -> [(String, String)] {
         var themes = [(String, String)]();
         
@@ -55,5 +55,17 @@ class AppConstants: NSObject {
         themes.append(theme9);
         
         return themes;
+    }
+    
+    // 工具
+    static func tools() -> [(String, String, String)] {
+        var tools = [(String, String, String)]()
+        tools.append(("scancode", "QrScanController", "扫描二维码"));
+        tools.append(("qrcode", "", "生成二维码"));
+        tools.append(("idcard", "", "生成身份证"));
+        tools.append(("checkidcard", "", "身份证校验"));
+        tools.append(("yinyang", "", "算一卦"));
+        
+        return tools;
     }
 }
