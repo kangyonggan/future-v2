@@ -770,6 +770,60 @@
             </objects>
             <point key="canvasLocation" x="5340" y="468.21589205397305"/>
         </scene>
+        <!--身份证校验-->
+        <scene sceneID="Sqp-cZ-ruv">
+            <objects>
+                <viewController storyboardIdentifier="IdcardVerifyController" id="rfG-IF-nSJ" customClass="IdcardVerifyController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b4r-Iy-KS3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zsn-4R-U3g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lIC-N1-zfG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXf-Ys-Pvo">
+                                <rect key="frame" x="32" y="97" width="310" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99858456849999999" green="0.3324358463" blue="0.21369606259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="开始校验">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="verify:" destination="rfG-IF-nSJ" eventType="touchUpInside" id="V5U-gA-HzK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入身份证号码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="44l-Ku-GK1">
+                                <rect key="frame" x="47" y="36" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="endInputIdcard:" destination="rfG-IF-nSJ" eventType="editingDidEndOnExit" id="Teb-7r-eIQ"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ehl-es-HsN">
+                                <rect key="frame" x="32" y="190" width="310" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="身份证校验" id="V75-Ls-t0v"/>
+                    <connections>
+                        <outlet property="idcardInput" destination="44l-Ku-GK1" id="JQr-jP-t7m"/>
+                        <outlet property="resultText" destination="Ehl-es-HsN" id="btC-3u-hNu"/>
+                        <outlet property="verifyBtn" destination="lXf-Ys-Pvo" id="gWM-Xt-qEb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="umd-Vh-eRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6205.6000000000004" y="465.51724137931041"/>
+        </scene>
         <!--我的-->
         <scene sceneID="jTD-hE-0GD">
             <objects>

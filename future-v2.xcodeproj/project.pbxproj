@@ -10,6 +10,7 @@
 		111DBBBB1F5563040087512B /* PhotoAlbumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBBA1F5563040087512B /* PhotoAlbumUtil.swift */; };
 		111DBBBD1F5574480087512B /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBBC1F5574480087512B /* FileUtil.swift */; };
 		111DBBBF1F5576D50087512B /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBBE1F5576D50087512B /* CacheImage.swift */; };
+		111DBBC11F564D490087512B /* IdcardVerifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBC01F564D490087512B /* IdcardVerifyController.swift */; };
 		1134EC681F52961800A28B4C /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC671F52961800A28B4C /* MessageTableViewController.swift */; };
 		1134EC6A1F52967200A28B4C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC691F52967200A28B4C /* Message.swift */; };
 		1134EC6C1F52973A00A28B4C /* MessageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC6B1F52973A00A28B4C /* MessageTableCell.swift */; };
@@ -100,6 +101,7 @@
 		111DBBBA1F5563040087512B /* PhotoAlbumUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumUtil.swift; sourceTree = "<group>"; };
 		111DBBBC1F5574480087512B /* FileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		111DBBBE1F5576D50087512B /* CacheImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
+		111DBBC01F564D490087512B /* IdcardVerifyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdcardVerifyController.swift; sourceTree = "<group>"; };
 		1134EC671F52961800A28B4C /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		1134EC691F52967200A28B4C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1134EC6B1F52973A00A28B4C /* MessageTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableCell.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				1134EC811F5511DC00A28B4C /* QrScanController.swift */,
 				1134EC831F55185D00A28B4C /* QrScanResultController.swift */,
 				1134EC871F553E6500A28B4C /* QrGenerateController.swift */,
+				111DBBC01F564D490087512B /* IdcardVerifyController.swift */,
 			);
 			name = tool;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				1134EC841F55185D00A28B4C /* QrScanResultController.swift in Sources */,
 				11F4B53E1F4FD0C600BE9850 /* HotCollectionCell.swift in Sources */,
 				11F4B5401F4FEA2900BE9850 /* FavoriteCollectionView.swift in Sources */,
+				111DBBC11F564D490087512B /* IdcardVerifyController.swift in Sources */,
 				1134EC6E1F52A56800A28B4C /* MessageDetailController.swift in Sources */,
 				11F4B50B1F4ED80E00BE9850 /* TabBarController.swift in Sources */,
 				11F4B51E1F4EEA1700BE9850 /* DictionaryDao.swift in Sources */,

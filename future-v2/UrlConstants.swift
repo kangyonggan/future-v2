@@ -90,4 +90,7 @@ class UrlConstants: NSObject {
     // 删除消息
     static let MESSAGE_DELETE = MOBILE + "message/delete";
     
+    // 身份证校验
+    static let TOOL_IDCARD_VERIFY = MOBILE + "tool/idcard/verify";
+    
 }
