@@ -23,6 +23,11 @@ class QrScanController: UIViewController, UIImagePickerControllerDelegate, UINav
     var preview:AVCaptureVideoPreviewLayer!
     var isOk = false;
     
+    // 上下扫描
+    var timer: Timer!
+    var scanLineView: UIView!;
+    var scanLineViewY = 0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -98,6 +103,17 @@ class QrScanController: UIViewController, UIImagePickerControllerDelegate, UINav
             self.scanRectView.layer.borderWidth = 1;
             
             isOk = true;
+            
+            // 上下扫描的效果
+            self.scanLineView = UIView(frame: CGRect(x: 0, y: 0, width: scanSize.width, height: 4));
+            self.scanLineView.backgroundColor = UIColor(red: 245/255, green: 75/255, blue: 45/255, alpha: 0.7);
+            self.scanLineView.layer.cornerRadius = 20;
+            self.scanLineView.layer.masksToBounds = true;
+            
+            self.scanRectView.addSubview(self.scanLineView);
+            
+            // 启用计时器，控制每个一段时间执行一次scanLine方法
+            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(scanLine), userInfo:nil, repeats: true)
         } catch _ {
             //打印错误消息
             let alertController = UIAlertController(title: "提醒",
@@ -107,6 +123,14 @@ class QrScanController: UIViewController, UIImagePickerControllerDelegate, UINav
             alertController.addAction(cancelAction)
             self.present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    // 上下扫描的特效
+    func scanLine() {
+        self.scanLineViewY = (self.scanLineViewY + 1) % Int(self.scanRectView.frame.height);
+        var frame = self.scanLineView.frame;
+        frame = CGRect(x: frame.origin.x, y: CGFloat(self.scanLineViewY), width: frame.width, height: frame.height);
+        self.scanLineView.frame = frame;
     }
     
     // 摄像头捕获
@@ -126,6 +150,11 @@ class QrScanController: UIViewController, UIImagePickerControllerDelegate, UINav
             Toast.showMessage("没有扫到二维码", onView: self.view);
             self.session.startRunning()
         } else {
+            // 震动
+            //建立的SystemSoundID对象
+            let soundID = SystemSoundID(kSystemSoundID_Vibrate)
+            //振动
+            AudioServicesPlaySystemSound(soundID)
             
             // 跳转到扫描结果页
             let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QrScanResultController") as! QrScanResultController;
