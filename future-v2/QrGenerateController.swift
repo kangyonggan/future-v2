@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Photos
 
 class QrGenerateController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -87,13 +86,20 @@ class QrGenerateController: UIViewController, UIImagePickerControllerDelegate, U
             return;
         }
         
+        var icon = iconImage.image;
+        if icon == nil {
+            icon = UIImage(named: "empty");
+        }
+        
         // 带图片的二维码图片
-        resultImage.image = generateQr(content, icon: iconImage.image);
+        let image = generateQr(content, icon: icon);
+        resultImage.image = image;
         
         // 清空内容和logo
         contentInput.text = "";
         iconImage.image = nil;
         Toast.showMessage("生成成功", onView: self.view);
+        
     }
     
     // 保存到相册
@@ -124,8 +130,8 @@ class QrGenerateController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
-    // 生成二维码
-    func generateQr(_ content: String, icon: UIImage?) -> UIImage {
+    // 生成二维码, 并保存到app
+    func generateQr(_ content: String, icon: UIImage?) -> UIImage? {
         // 字符串内容
         let stringData = content.data(using: String.Encoding.utf8, allowLossyConversion: false)
         
@@ -161,9 +167,13 @@ class QrGenerateController: UIViewController, UIImagePickerControllerDelegate, U
             let resultImage = UIGraphicsGetImageFromCurrentImageContext()
             
             UIGraphicsEndImageContext()
-            return resultImage!
+            
+            return resultImage;
         }
-        return codeImage
+        
+        let data = UIImagePNGRepresentation(codeImage);
+        
+        return codeImage;
     }
     
 }
