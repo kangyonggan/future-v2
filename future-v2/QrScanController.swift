@@ -71,7 +71,7 @@ class QrScanController: UIViewController, UIImagePickerControllerDelegate, UINav
             let windowSize = UIScreen.main.bounds.size
             let scanSize = CGSize(width:windowSize.width * 3 / 4, height: windowSize.width * 3 / 4)
             var scanRect = CGRect(x: (windowSize.width-scanSize.width) / 2,
-                                  y: (windowSize.height-scanSize.height) / 2,
+                                  y: (windowSize.height-scanSize.height) / 2 - 100,
                                   width: scanSize.width, height: scanSize.height)
             
             //计算rectOfInterest 注意x,y交换位置
@@ -93,7 +93,7 @@ class QrScanController: UIViewController, UIImagePickerControllerDelegate, UINav
             self.scanRectView.frame = CGRect(x: 0, y: 0, width: scanSize.width,
                                              height: scanSize.height);
             self.scanRectView.center = CGPoint(x: UIScreen.main.bounds.midX,
-                                                y: UIScreen.main.bounds.midY)
+                                                y: UIScreen.main.bounds.midY - 100)
             self.scanRectView.layer.borderColor = AppConstants.MASTER_COLOR.cgColor;
             self.scanRectView.layer.borderWidth = 1;
             
