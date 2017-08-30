@@ -93,4 +93,7 @@ class UrlConstants: NSObject {
     // 身份证校验
     static let TOOL_IDCARD_VERIFY = MOBILE + "tool/idcard/verify";
     
+    // 身份证生成
+    static let TOOL_IDCARD_GENERATE = MOBILE + "tool/idcard/generate";
+    
 }

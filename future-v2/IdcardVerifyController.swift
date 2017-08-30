@@ -32,6 +32,34 @@ class IdcardVerifyController: UIViewController {
         // 按钮
         verifyBtn.layer.cornerRadius = 20;
         verifyBtn.layer.masksToBounds = true;
+        
+        // 长按事件
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.saveResult))
+        self.resultText.isUserInteractionEnabled = true;
+        self.resultText.addGestureRecognizer(longPress)
+    }
+    // 长按保存结果
+    func saveResult() {
+        if resultText.text!.isEmpty {
+            return;
+        }
+        
+        let alert = UIAlertController(title: "是否需要复制校验结果？", message: nil, preferredStyle: .actionSheet);
+        let cancelBtn = UIAlertAction(title: "取消", style: .cancel, handler: nil);
+        
+        let okBtn = UIAlertAction(title: "复制", style: .destructive, handler: copyResult)
+        
+        alert.addAction(cancelBtn);
+        alert.addAction(okBtn);
+        
+        self.present(alert, animated: true, completion: nil);
+    }
+    
+    // 复制
+    func copyResult(_ action: UIAlertAction) {
+        UIPasteboard.general.string = resultText.text!;
+        Toast.showMessage("复制成功", onView: self.view);
+        
     }
     
     // 结束输入身份证
@@ -41,6 +69,9 @@ class IdcardVerifyController: UIViewController {
     
     // 开始校验
     @IBAction func verify(_ sender: Any) {
+        // 收起键盘
+        UIApplication.shared.keyWindow?.endEditing(true);
+        
         let idcard = idcardInput.text!;
         
         if idcard.isEmpty {

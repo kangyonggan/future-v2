@@ -11,6 +11,9 @@
 		111DBBBD1F5574480087512B /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBBC1F5574480087512B /* FileUtil.swift */; };
 		111DBBBF1F5576D50087512B /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBBE1F5576D50087512B /* CacheImage.swift */; };
 		111DBBC11F564D490087512B /* IdcardVerifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBC01F564D490087512B /* IdcardVerifyController.swift */; };
+		111DBBC31F566B140087512B /* IdcardGenerateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBC21F566B140087512B /* IdcardGenerateController.swift */; };
+		111DBBC51F567CC80087512B /* ProvinceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBC41F567CC80087512B /* ProvinceTableViewController.swift */; };
+		111DBBC71F567FE40087512B /* ProvinceTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBC61F567FE40087512B /* ProvinceTableCell.swift */; };
 		1134EC681F52961800A28B4C /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC671F52961800A28B4C /* MessageTableViewController.swift */; };
 		1134EC6A1F52967200A28B4C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC691F52967200A28B4C /* Message.swift */; };
 		1134EC6C1F52973A00A28B4C /* MessageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC6B1F52973A00A28B4C /* MessageTableCell.swift */; };
@@ -102,6 +105,9 @@
 		111DBBBC1F5574480087512B /* FileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		111DBBBE1F5576D50087512B /* CacheImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
 		111DBBC01F564D490087512B /* IdcardVerifyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdcardVerifyController.swift; sourceTree = "<group>"; };
+		111DBBC21F566B140087512B /* IdcardGenerateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdcardGenerateController.swift; sourceTree = "<group>"; };
+		111DBBC41F567CC80087512B /* ProvinceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceTableViewController.swift; sourceTree = "<group>"; };
+		111DBBC61F567FE40087512B /* ProvinceTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceTableCell.swift; sourceTree = "<group>"; };
 		1134EC671F52961800A28B4C /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		1134EC691F52967200A28B4C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1134EC6B1F52973A00A28B4C /* MessageTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableCell.swift; sourceTree = "<group>"; };
@@ -215,6 +221,9 @@
 				1134EC831F55185D00A28B4C /* QrScanResultController.swift */,
 				1134EC871F553E6500A28B4C /* QrGenerateController.swift */,
 				111DBBC01F564D490087512B /* IdcardVerifyController.swift */,
+				111DBBC21F566B140087512B /* IdcardGenerateController.swift */,
+				111DBBC41F567CC80087512B /* ProvinceTableViewController.swift */,
+				111DBBC61F567FE40087512B /* ProvinceTableCell.swift */,
 			);
 			name = tool;
 			sourceTree = "<group>";
@@ -664,6 +673,7 @@
 				11F4B5461F4FF24800BE9850 /* BookTableViewController.swift in Sources */,
 				11F4B5261F4EFCED00BE9850 /* ForgotController.swift in Sources */,
 				1134EC721F52E7DD00A28B4C /* MessageReplyController.swift in Sources */,
+				111DBBC51F567CC80087512B /* ProvinceTableViewController.swift in Sources */,
 				11F4B54E1F5009C400BE9850 /* SectionDetailController.swift in Sources */,
 				11F4B50D1F4EDE3E00BE9850 /* AppConstants.swift in Sources */,
 				11F4B50F1F4EDE6600BE9850 /* UrlConstants.swift in Sources */,
@@ -677,6 +687,7 @@
 				11F4B5061F4ECE7700BE9850 /* LoginController.swift in Sources */,
 				11F4B5321F4FC82B00BE9850 /* CategoryCollectionView.swift in Sources */,
 				11F4B54C1F50049A00BE9850 /* SectionDao.swift in Sources */,
+				111DBBC71F567FE40087512B /* ProvinceTableCell.swift in Sources */,
 				11F4B5221F4EF02200BE9850 /* RegisterController.swift in Sources */,
 				11F4B5171F4EE64100BE9850 /* Http.swift in Sources */,
 				113666CD1F5067E000DFAC99 /* ThemeTableViewController.swift in Sources */,
@@ -697,6 +708,7 @@
 				11F4B4D51F4EAE4500BE9850 /* future_v2.xcdatamodeld in Sources */,
 				113666CB1F502CA200DFAC99 /* SettingController.swift in Sources */,
 				11F4B5441F4FEC2000BE9850 /* BookDao.swift in Sources */,
+				111DBBC31F566B140087512B /* IdcardGenerateController.swift in Sources */,
 				11F4B5151F4EE28900BE9850 /* Toast.swift in Sources */,
 				1134EC741F53E08200A28B4C /* AvatarUploadController.swift in Sources */,
 				11F4B5241F4EF9D000BE9850 /* RegisterSuccessController.swift in Sources */,

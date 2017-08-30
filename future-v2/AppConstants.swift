@@ -63,9 +63,52 @@ class AppConstants: NSObject {
         tools.append(("scancode", "QrScanController", "扫描二维码"));
         tools.append(("qrcode", "QrGenerateController", "生成二维码"));
         tools.append(("yinyang", "", "算一卦"));
-        tools.append(("idcard", "", "生成身份证"));
+        tools.append(("idcard", "IdcardGenerateController", "生成身份证"));
         tools.append(("checkidcard", "IdcardVerifyController", "身份证校验"));
         
         return tools;
+    }
+    
+    // 省份
+    static func provs() -> [(String, String)] {
+        var provs = [(String, String)]()// code, name
+        provs.append(("", "随机"));
+        provs.append(("11", "北京"));
+        provs.append(("12", "天津"));
+        provs.append(("13", "河北"));
+        provs.append(("14", "山西"));
+        provs.append(("15", "内蒙古"));
+        provs.append(("21", "辽宁"));
+        provs.append(("22", "吉林"));
+        provs.append(("23", "黑龙江"));
+        provs.append(("31", "上海"));
+        provs.append(("32", "江苏"));
+        provs.append(("33", "浙江"));
+        provs.append(("34", "安徽"));
+        provs.append(("35", "福建"));
+        provs.append(("36", "江西"));
+        provs.append(("37", "山东"));
+        provs.append(("41", "河南"));
+        provs.append(("42", "湖北"));
+        provs.append(("43", "湖南"));
+        provs.append(("44", "广东"));
+        provs.append(("45", "广西"));
+        provs.append(("46", "海南"));
+        provs.append(("50", "重庆"));
+        provs.append(("51", "四川"));
+        provs.append(("52", "贵州"));
+        provs.append(("53", "云南"));
+        provs.append(("54", "西藏"));
+        provs.append(("61", "陕西"));
+        provs.append(("62", "甘肃"));
+        provs.append(("63", "青海"));
+        provs.append(("64", "宁夏"));
+        provs.append(("65", "新疆"));
+        provs.append(("71", "台湾"));
+        provs.append(("81", "香港"));
+        provs.append(("82", "澳门"));
+        provs.append(("91", "国外"));
+        
+        return provs;
     }
 }
