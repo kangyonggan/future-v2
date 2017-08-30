@@ -26,4 +26,9 @@ class AboutController: UIViewController {
         logoImage.layer.masksToBounds = true;
     }
     
+    // 评分
+    @IBAction func pingFen(_ sender: Any) {
+        Toast.showMessage("该App暂未上架，无法评分！", onView: self.view);
+    }
+    
 }

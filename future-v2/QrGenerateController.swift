@@ -109,9 +109,11 @@ class QrGenerateController: UIViewController, UIImagePickerControllerDelegate, U
             let cancelBtn = UIAlertAction(title: "取消", style: .cancel, handler: nil);
             
             let okBtn = UIAlertAction(title: "保存到相册", style: .destructive, handler: saveToPhoto)
+            let copyBtn = UIAlertAction(title: "复制图片", style: .destructive, handler: copyImage)
             
             alert.addAction(cancelBtn);
             alert.addAction(okBtn);
+            alert.addAction(copyBtn)
             
             self.present(alert, animated: true, completion: nil);
         }
@@ -128,6 +130,11 @@ class QrGenerateController: UIViewController, UIImagePickerControllerDelegate, U
                 Toast.showMessage("保存失败", onView: self.view);
             }
         }
+    }
+    
+    func copyImage(_ action: UIAlertAction) {
+        UIPasteboard.general.image = resultImage.image!;
+        Toast.showMessage("复制成功", onView: self.view);
     }
     
     // 生成二维码, 并保存到app
