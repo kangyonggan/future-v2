@@ -127,6 +127,10 @@ class RegisterController: UIViewController {
     
     // 获取验证码
     @IBAction func getAuthCode(_ sender: Any) {
+        
+        // 收起键盘
+        UIApplication.shared.keyWindow?.endEditing(true);
+        
         if isLoading() {
             return;
         }

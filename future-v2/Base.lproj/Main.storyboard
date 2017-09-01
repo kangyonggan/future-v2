@@ -490,10 +490,10 @@
             </objects>
             <point key="canvasLocation" x="2500" y="-302.6986506746627"/>
         </scene>
-        <!--首页-->
+        <!--新闻-->
         <scene sceneID="wfD-T0-nNE">
             <objects>
-                <viewController id="cjZ-Mn-Al9" customClass="HomeIndexController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cjZ-Mn-Al9" customClass="NewsIndexController" customModule="future_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DFH-hA-jUV"/>
                         <viewControllerLayoutGuide type="bottom" id="I6G-Ax-pJb"/>
@@ -501,13 +501,108 @@
                     <view key="view" contentMode="scaleToFill" id="jQl-7A-3oO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B0b-L8-6Ut">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shc-mI-b4r">
+                                        <rect key="frame" x="22" y="8" width="31" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="推荐">
+                                            <color key="titleColor" red="0.99858456849999999" green="0.3324358463" blue="0.21369606259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLC-Nz-qpE">
+                                        <rect key="frame" x="130" y="7" width="31" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="图片">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slT-Fg-LUK">
+                                        <rect key="frame" x="182" y="7" width="31" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="段子">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2M-AB-3oi">
+                                        <rect key="frame" x="234" y="7" width="31" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="视频">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxC-br-Bk8">
+                                        <rect key="frame" x="288" y="7" width="31" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="游戏">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNT-MJ-ghm">
+                                        <rect key="frame" x="78" y="7" width="31" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="热点">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ByX-oc-Rfh" userLabel="h-line">
+                                <rect key="frame" x="0.0" y="45" width="375" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xcT-OW-0d5">
+                                <rect key="frame" x="0.0" y="52" width="375" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTableCell" rowHeight="89" id="z06-aG-Vhw">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z06-aG-Vhw" id="caG-f1-mKl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="8090" translatesAutoresizingMaskIntoConstraints="NO" id="VBd-HG-TLa">
+                                                    <rect key="frame" x="249" y="8" width="116" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="二十年前没有WIFI没有手机，80后和90后玩什么？" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bu-Br-DMU">
+                                                    <rect key="frame" x="9" y="2" width="239" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsN-yK-wth">
+                                                    <rect key="frame" x="9" y="67" width="226" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">段子 | 沧海笑渔樵	</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="首页" image="index" id="432-cE-ADZ"/>
+                    <tabBarItem key="tabBarItem" title="新闻" image="news" id="432-cE-ADZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="xcT-OW-0d5" id="KDo-zr-eBg"/>
+                        <outlet property="topView" destination="B0b-L8-6Ut" id="Jog-Z8-F2S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aYX-PS-CY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="-1032"/>
+            <point key="canvasLocation" x="2500" y="-1032.2338830584708"/>
         </scene>
         <!--首页-->
         <scene sceneID="bXj-eL-96T">
@@ -2161,7 +2256,7 @@
                                 <rect key="frame" x="16" y="8" width="343" height="595"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">未来科技服务协议（以下简称“本协议”）是上海未来科技有限责任公司（以下简称“本公司”）与用户(以下简称“您”)就未来科技平台（以下简称“本平台”）服务相关事项所订立的合约。在您注册成为未来科技平台用户前请务必仔细阅读以下协议的全部条款（特别是以粗体下划线标注的内容）。
+                                <string key="text">未来科技服务协议（以下简称“本协议”）是上海未来科技有限责任公司（以下简称“本公司”）与用户(以下简称“您”)就未来科技平台（以下简称“本平台”）服务相关事项所订立的合约。在您注册成为未来科技平台用户前请务必仔细阅读以下协议的全部条款（特别是以粗体下划线标注的内容）。
 一、 协议的签署及修订
 您通过点击注册或以其他方式（包括但不限于签字或签章确认等方式）接受本协议，即表示您与本公司已达成协议并同意接受本协议的全部约定内容以及与本协议有关的已经发布或将来可能发布的各项规则、页面展示、操作流程、公告或通知（以下统称“未来科技平台规则“）。 如果您不同意本协议的任意内容，或不理解某一条款的含义，请您立即停止注册或主动停止使用本平台的服务。一旦您使用未来科技平台服务，即表示您同意遵循未来科技平台规则。 您同意，本公司有权随时对本协议内容进行单方面的变更，并以公告的方式予以告知，无需另行单独通知您；您应不时地注意本协议及具体规则的变更，若您在本协议及具体规则内容公告变更后继续使用本平台服务的，表示您已充分阅读、理解并接受修改后的协议和具体规则内容，也将遵循修改后的协议和具体规则接受本平台的服务；同时就您在协议和具体规则修订前通过本平台进行的交易及其效力，视为您已同意并已按照本协议及有关规则进行了相应的授权和追认。 若您不同意修改后的协议内容，您应在修改生效前停止使用本平台的服务。若您在本协议内容公告变更后继续使用未来科技平台服务的，表示您已充分阅读、理解并接受修改后的协议内容，也将遵循修改后的协议内容使用本服务；若您不同意修改后的协议内容，您应在修改生效前停止使用本服务。
 二、 相关定义
@@ -2189,7 +2284,7 @@
 本协议履行过程中，本公司向您发出的书面通知方式包括但不限于邮寄纸质通知、未来科技平台公告、电子邮件、站内信、手机短信和传真等方式。如本公司以邮寄方式向您发出书面通知的，则在本公司按照您在本公司通讯地址交邮后的第三个自然日即视为送达。如以未来科技平台公告、电子邮件、手机短信和传真等电子方式发出书面通知的，则在通知发送成功即视为送达。
 十三、 其他
 1. 在本协议中，除非本协议上下文另有规定：凡提及本协议应包括本协议及其附件，以及对该协议所作的任何修改、修订或补充的文件；凡提及条、款和附件仅指本协议的条、款和附件；本协议条款的标题仅为查阅方便而设置，不应构成对本协议的任何解释，不对标题之下的内容及范围作任何限定。 2. 本协议的附件及各项补充、修订或变更，为本协议不可分割的组成部分，与本协议正文具有同等法律效力。 3. 协议任一方通过APP、网页等页面点击确认与其他方式（包括但不限于签字或签章确认等方式）接受本协议具有同等法律效力。 4. 如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，则应认为该条款可与本协议相分割，并可被尽可能接近各方意图的、能够保留本协议要求的经济目的的、有效的新条款所取代，而且在此情况下，本协议的其他条款仍然完全有效并具有约束力。 5. 协议各方应按法律法规及相关规定各自承担与本协议相关的税费。 6. 本协议未尽事宜，由双方协商处理，或者按中华人民共和国有关法律、法规的规定执行。
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -2642,12 +2737,13 @@
     <resources>
         <image name="120" width="120" height="120"/>
         <image name="600" width="600" height="600"/>
+        <image name="8090" width="272" height="178"/>
         <image name="book" width="20" height="20"/>
         <image name="down" width="120" height="120"/>
         <image name="favorite" width="20" height="20"/>
-        <image name="index" width="20" height="20"/>
         <image name="is-read" width="20" height="20"/>
         <image name="my" width="20" height="20"/>
+        <image name="news" width="20" height="20"/>
         <image name="no-cover" width="100" height="125"/>
         <image name="point" width="120" height="120"/>
         <image name="qrcode" width="120" height="120"/>

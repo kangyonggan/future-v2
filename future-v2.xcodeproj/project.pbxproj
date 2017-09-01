@@ -25,7 +25,7 @@
 		1134EC791F54FB0700A28B4C /* ToolIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC781F54FB0700A28B4C /* ToolIndexController.swift */; };
 		1134EC7B1F54FB8100A28B4C /* ToolCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC7A1F54FB8100A28B4C /* ToolCollectionView.swift */; };
 		1134EC7D1F54FB9000A28B4C /* ToolCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC7C1F54FB9000A28B4C /* ToolCollectionCell.swift */; };
-		1134EC801F550D8B00A28B4C /* HomeIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC7F1F550D8B00A28B4C /* HomeIndexController.swift */; };
+		1134EC801F550D8B00A28B4C /* NewsIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC7F1F550D8B00A28B4C /* NewsIndexController.swift */; };
 		1134EC821F5511DC00A28B4C /* QrScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC811F5511DC00A28B4C /* QrScanController.swift */; };
 		1134EC841F55185D00A28B4C /* QrScanResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC831F55185D00A28B4C /* QrScanResultController.swift */; };
 		1134EC881F553E6500A28B4C /* QrGenerateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC871F553E6500A28B4C /* QrGenerateController.swift */; };
@@ -41,6 +41,7 @@
 		113666E81F51E72700DFAC99 /* EmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666E71F51E72700DFAC99 /* EmailController.swift */; };
 		113666EA1F524DE500DFAC99 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666E91F524DE500DFAC99 /* AboutController.swift */; };
 		113666EC1F52516300DFAC99 /* PasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666EB1F52516300DFAC99 /* PasswordController.swift */; };
+		117D92471F57D05A0087B5BF /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D92461F57D05A0087B5BF /* News.swift */; };
 		11F4B4CD1F4EAE4500BE9850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4B4CC1F4EAE4500BE9850 /* AppDelegate.swift */; };
 		11F4B4D21F4EAE4500BE9850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F4B4D01F4EAE4500BE9850 /* Main.storyboard */; };
 		11F4B4D51F4EAE4500BE9850 /* future_v2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11F4B4D31F4EAE4500BE9850 /* future_v2.xcdatamodeld */; };
@@ -119,7 +120,7 @@
 		1134EC781F54FB0700A28B4C /* ToolIndexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolIndexController.swift; sourceTree = "<group>"; };
 		1134EC7A1F54FB8100A28B4C /* ToolCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolCollectionView.swift; sourceTree = "<group>"; };
 		1134EC7C1F54FB9000A28B4C /* ToolCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolCollectionCell.swift; sourceTree = "<group>"; };
-		1134EC7F1F550D8B00A28B4C /* HomeIndexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeIndexController.swift; sourceTree = "<group>"; };
+		1134EC7F1F550D8B00A28B4C /* NewsIndexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsIndexController.swift; sourceTree = "<group>"; };
 		1134EC811F5511DC00A28B4C /* QrScanController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrScanController.swift; sourceTree = "<group>"; };
 		1134EC831F55185D00A28B4C /* QrScanResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrScanResultController.swift; sourceTree = "<group>"; };
 		1134EC871F553E6500A28B4C /* QrGenerateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrGenerateController.swift; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		113666E71F51E72700DFAC99 /* EmailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailController.swift; sourceTree = "<group>"; };
 		113666E91F524DE500DFAC99 /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		113666EB1F52516300DFAC99 /* PasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordController.swift; sourceTree = "<group>"; };
+		117D92461F57D05A0087B5BF /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		11F4B4C91F4EAE4500BE9850 /* future-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "future-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F4B4CC1F4EAE4500BE9850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F4B4D11F4EAE4500BE9850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -228,12 +230,12 @@
 			name = tool;
 			sourceTree = "<group>";
 		};
-		1134EC7E1F550D7C00A28B4C /* home */ = {
+		1134EC7E1F550D7C00A28B4C /* news */ = {
 			isa = PBXGroup;
 			children = (
-				1134EC7F1F550D8B00A28B4C /* HomeIndexController.swift */,
+				1134EC7F1F550D8B00A28B4C /* NewsIndexController.swift */,
 			);
-			name = home;
+			name = news;
 			sourceTree = "<group>";
 		};
 		113666D41F51408700DFAC99 /* music */ = {
@@ -326,6 +328,7 @@
 				11F4B5491F5003F100BE9850 /* Section.swift */,
 				113666DF1F51B87500DFAC99 /* User.swift */,
 				1134EC691F52967200A28B4C /* Message.swift */,
+				117D92461F57D05A0087B5BF /* News.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -354,7 +357,7 @@
 		11F4B5021F4EAFC300BE9850 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				1134EC7E1F550D7C00A28B4C /* home */,
+				1134EC7E1F550D7C00A28B4C /* news */,
 				1134EC771F54FABC00A28B4C /* tool */,
 				113666D41F51408700DFAC99 /* music */,
 				11F4B52E1F4FB8C500BE9850 /* my */,
@@ -664,7 +667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1134EC681F52961800A28B4C /* MessageTableViewController.swift in Sources */,
-				1134EC801F550D8B00A28B4C /* HomeIndexController.swift in Sources */,
+				1134EC801F550D8B00A28B4C /* NewsIndexController.swift in Sources */,
 				113666E81F51E72700DFAC99 /* EmailController.swift in Sources */,
 				113666D11F506B4F00DFAC99 /* SectionTableViewController.swift in Sources */,
 				11F4B52D1F4FB88F00BE9850 /* MyIndexController.swift in Sources */,
@@ -681,6 +684,7 @@
 				11F4B5201F4EEA9600BE9850 /* DictionaryKey.swift in Sources */,
 				111DBBBD1F5574480087512B /* FileUtil.swift in Sources */,
 				11F4B52B1F4FB81B00BE9850 /* BookIndexController.swift in Sources */,
+				117D92471F57D05A0087B5BF /* News.swift in Sources */,
 				1134EC821F5511DC00A28B4C /* QrScanController.swift in Sources */,
 				113666E61F51D84E00DFAC99 /* RealnameController.swift in Sources */,
 				11F4B5481F4FF3AF00BE9850 /* BookTableCell.swift in Sources */,

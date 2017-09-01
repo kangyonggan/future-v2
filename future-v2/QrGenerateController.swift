@@ -99,13 +99,12 @@ class QrGenerateController: UIViewController, UIImagePickerControllerDelegate, U
         contentInput.text = "";
         iconImage.image = nil;
         Toast.showMessage("生成成功", onView: self.view);
-        
     }
     
     // 保存到相册
     func saveImage() {
         if resultImage.image != nil {
-            let alert = UIAlertController(title: "把生成的二维码保存到相册", message: nil, preferredStyle: .actionSheet);
+            let alert = UIAlertController(title: "把生成的二维码保存到相册或复制到粘贴板", message: nil, preferredStyle: .actionSheet);
             let cancelBtn = UIAlertAction(title: "取消", style: .cancel, handler: nil);
             
             let okBtn = UIAlertAction(title: "保存到相册", style: .destructive, handler: saveToPhoto)
@@ -177,8 +176,6 @@ class QrGenerateController: UIViewController, UIImagePickerControllerDelegate, U
             
             return resultImage;
         }
-        
-        let data = UIImagePNGRepresentation(codeImage);
         
         return codeImage;
     }
