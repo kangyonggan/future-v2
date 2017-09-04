@@ -28,6 +28,7 @@ class MusicIndexController: UIViewController {
     var player: AVPlayer!;
     var isPlaying = false;
     var isFirst = true;
+    var isDraging = false;
     
     // 歌曲列表
     let musics = ["塞宁 - 轻微", "明萌派 - 茶汤", "龙宽九段 - 我听这种音乐的时候最爱你"];
@@ -104,6 +105,10 @@ class MusicIndexController: UIViewController {
     
     // 监听播放进度，修改进度条
     func changeSlider(time: CMTime) {
+        if isDraging {
+            return;
+        }
+        
         //更新进度条进度值
         let currentTime = CMTimeGetSeconds(self.player!.currentTime())
         self.timeSlider.value = Float(currentTime)
@@ -240,10 +245,12 @@ class MusicIndexController: UIViewController {
         let time = CMTimeMake(Int64(value), 1);
         
         player.seek(to: time, completionHandler: {(b) in })
+        isDraging = false;
     }
     
     // 拖拽中
     @IBAction func dragIn(_ sender: Any) {
+        isDraging = true;
         let value = timeSlider.value;
         timeNowLabel.text = formatTime(Float64(value));
     }
