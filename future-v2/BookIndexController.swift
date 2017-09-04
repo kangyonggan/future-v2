@@ -43,6 +43,10 @@ class BookIndexController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // 导航条
         parent?.navigationItem.title = "小说";
+        // 显示导航条
+        parent?.navigationController?.setNavigationBarHidden(false, animated: false);
+        // tabbar背景色
+        self.tabBarController?.tabBar.barTintColor = nil;
         
         // 加载我的收藏
         let books = bookDao.findFavoriteBooks(4);

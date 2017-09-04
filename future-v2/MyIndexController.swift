@@ -75,6 +75,10 @@ class MyIndexController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
+        // 显示导航条
+        parent?.navigationController?.setNavigationBarHidden(false, animated: false);
+        // tabbar背景色
+        self.tabBarController?.tabBar.barTintColor = nil;
         
         initData();
         

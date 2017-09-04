@@ -25,7 +25,7 @@
 		1134EC791F54FB0700A28B4C /* ToolIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC781F54FB0700A28B4C /* ToolIndexController.swift */; };
 		1134EC7B1F54FB8100A28B4C /* ToolCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC7A1F54FB8100A28B4C /* ToolCollectionView.swift */; };
 		1134EC7D1F54FB9000A28B4C /* ToolCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC7C1F54FB9000A28B4C /* ToolCollectionCell.swift */; };
-		1134EC801F550D8B00A28B4C /* NewsIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC7F1F550D8B00A28B4C /* NewsIndexController.swift */; };
+		1134EC801F550D8B00A28B4C /* MusicIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC7F1F550D8B00A28B4C /* MusicIndexController.swift */; };
 		1134EC821F5511DC00A28B4C /* QrScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC811F5511DC00A28B4C /* QrScanController.swift */; };
 		1134EC841F55185D00A28B4C /* QrScanResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC831F55185D00A28B4C /* QrScanResultController.swift */; };
 		1134EC881F553E6500A28B4C /* QrGenerateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134EC871F553E6500A28B4C /* QrGenerateController.swift */; };
@@ -41,6 +41,9 @@
 		113666E81F51E72700DFAC99 /* EmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666E71F51E72700DFAC99 /* EmailController.swift */; };
 		113666EA1F524DE500DFAC99 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666E91F524DE500DFAC99 /* AboutController.swift */; };
 		113666EC1F52516300DFAC99 /* PasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666EB1F52516300DFAC99 /* PasswordController.swift */; };
+		1151F0F61F5C2D7700932398 /* 龙宽九段 - 我听这种音乐的时候最爱你.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1151F0F51F5C2D7700932398 /* 龙宽九段 - 我听这种音乐的时候最爱你.mp3 */; };
+		1151F0F81F5C2D8800932398 /* 明萌派 - 茶汤.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1151F0F71F5C2D8800932398 /* 明萌派 - 茶汤.mp3 */; };
+		1151F0FA1F5C2D9400932398 /* 塞宁 - 轻微.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1151F0F91F5C2D9400932398 /* 塞宁 - 轻微.mp3 */; };
 		117D92471F57D05A0087B5BF /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D92461F57D05A0087B5BF /* News.swift */; };
 		11F4B4CD1F4EAE4500BE9850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4B4CC1F4EAE4500BE9850 /* AppDelegate.swift */; };
 		11F4B4D21F4EAE4500BE9850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F4B4D01F4EAE4500BE9850 /* Main.storyboard */; };
@@ -120,7 +123,7 @@
 		1134EC781F54FB0700A28B4C /* ToolIndexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolIndexController.swift; sourceTree = "<group>"; };
 		1134EC7A1F54FB8100A28B4C /* ToolCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolCollectionView.swift; sourceTree = "<group>"; };
 		1134EC7C1F54FB9000A28B4C /* ToolCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolCollectionCell.swift; sourceTree = "<group>"; };
-		1134EC7F1F550D8B00A28B4C /* NewsIndexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsIndexController.swift; sourceTree = "<group>"; };
+		1134EC7F1F550D8B00A28B4C /* MusicIndexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicIndexController.swift; sourceTree = "<group>"; };
 		1134EC811F5511DC00A28B4C /* QrScanController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrScanController.swift; sourceTree = "<group>"; };
 		1134EC831F55185D00A28B4C /* QrScanResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrScanResultController.swift; sourceTree = "<group>"; };
 		1134EC871F553E6500A28B4C /* QrGenerateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrGenerateController.swift; sourceTree = "<group>"; };
@@ -136,6 +139,9 @@
 		113666E71F51E72700DFAC99 /* EmailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailController.swift; sourceTree = "<group>"; };
 		113666E91F524DE500DFAC99 /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		113666EB1F52516300DFAC99 /* PasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordController.swift; sourceTree = "<group>"; };
+		1151F0F51F5C2D7700932398 /* 龙宽九段 - 我听这种音乐的时候最爱你.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "龙宽九段 - 我听这种音乐的时候最爱你.mp3"; sourceTree = "<group>"; };
+		1151F0F71F5C2D8800932398 /* 明萌派 - 茶汤.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "明萌派 - 茶汤.mp3"; sourceTree = "<group>"; };
+		1151F0F91F5C2D9400932398 /* 塞宁 - 轻微.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "塞宁 - 轻微.mp3"; sourceTree = "<group>"; };
 		117D92461F57D05A0087B5BF /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		11F4B4C91F4EAE4500BE9850 /* future-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "future-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F4B4CC1F4EAE4500BE9850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -230,17 +236,27 @@
 			name = tool;
 			sourceTree = "<group>";
 		};
-		1134EC7E1F550D7C00A28B4C /* news */ = {
+		1134EC7E1F550D7C00A28B4C /* music */ = {
 			isa = PBXGroup;
 			children = (
-				1134EC7F1F550D8B00A28B4C /* NewsIndexController.swift */,
+				1134EC7F1F550D8B00A28B4C /* MusicIndexController.swift */,
 			);
-			name = news;
+			name = music;
 			sourceTree = "<group>";
 		};
 		113666D41F51408700DFAC99 /* music */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			name = music;
+			sourceTree = "<group>";
+		};
+		1151F0F21F5C16A200932398 /* music */ = {
+			isa = PBXGroup;
+			children = (
+				1151F0F91F5C2D9400932398 /* 塞宁 - 轻微.mp3 */,
+				1151F0F71F5C2D8800932398 /* 明萌派 - 茶汤.mp3 */,
+				1151F0F51F5C2D7700932398 /* 龙宽九段 - 我听这种音乐的时候最爱你.mp3 */,
 			);
 			name = music;
 			sourceTree = "<group>";
@@ -270,6 +286,7 @@
 		11F4B4CB1F4EAE4500BE9850 /* future-v2 */ = {
 			isa = PBXGroup;
 			children = (
+				1151F0F21F5C16A200932398 /* music */,
 				11F4B5181F4EE75C00BE9850 /* constants */,
 				11F4B5031F4EAFCB00BE9850 /* swift */,
 				11F4B5021F4EAFC300BE9850 /* controller */,
@@ -357,7 +374,7 @@
 		11F4B5021F4EAFC300BE9850 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				1134EC7E1F550D7C00A28B4C /* news */,
+				1134EC7E1F550D7C00A28B4C /* music */,
 				1134EC771F54FABC00A28B4C /* tool */,
 				113666D41F51408700DFAC99 /* music */,
 				11F4B52E1F4FB8C500BE9850 /* my */,
@@ -584,6 +601,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F4B4DA1F4EAE4500BE9850 /* LaunchScreen.storyboard in Resources */,
+				1151F0F61F5C2D7700932398 /* 龙宽九段 - 我听这种音乐的时候最爱你.mp3 in Resources */,
+				1151F0FA1F5C2D9400932398 /* 塞宁 - 轻微.mp3 in Resources */,
+				1151F0F81F5C2D8800932398 /* 明萌派 - 茶汤.mp3 in Resources */,
 				11F4B5301F4FC48A00BE9850 /* Assets.xcassets in Resources */,
 				11F4B4D21F4EAE4500BE9850 /* Main.storyboard in Resources */,
 			);
@@ -667,7 +687,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1134EC681F52961800A28B4C /* MessageTableViewController.swift in Sources */,
-				1134EC801F550D8B00A28B4C /* NewsIndexController.swift in Sources */,
+				1134EC801F550D8B00A28B4C /* MusicIndexController.swift in Sources */,
 				113666E81F51E72700DFAC99 /* EmailController.swift in Sources */,
 				113666D11F506B4F00DFAC99 /* SectionTableViewController.swift in Sources */,
 				11F4B52D1F4FB88F00BE9850 /* MyIndexController.swift in Sources */,

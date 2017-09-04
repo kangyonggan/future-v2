@@ -25,4 +25,7 @@ class DictionaryKey: NSObject {
     // 主题
     static let THEME = "THEME";
     
+    // 新闻下一次开始加载的标识
+    static let MIN_BEHOT = "MIN_BEHOT";
+    
 }

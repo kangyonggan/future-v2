@@ -168,7 +168,9 @@ class QrGenerateController: UIViewController, UIImagePickerControllerDelegate, U
             
             let x = (rect.width - avatarSize.width) * 0.5
             let y = (rect.height - avatarSize.height) * 0.5
+            
             icon!.draw(in: CGRect(x: x, y: y, width: avatarSize.width, height: avatarSize.height))
+            
             
             let resultImage = UIGraphicsGetImageFromCurrentImageContext()
             

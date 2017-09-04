@@ -26,6 +26,10 @@ class ToolIndexController: UIViewController {
         
         // 导航条
         parent?.navigationItem.title = "综合";
+        // 显示导航条
+        parent?.navigationController?.setNavigationBarHidden(false, animated: false);
+        // tabbar背景色
+        self.tabBarController?.tabBar.barTintColor = nil;
     }
     
     // 初始化界面
