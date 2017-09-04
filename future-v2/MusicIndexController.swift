@@ -29,6 +29,9 @@ class MusicIndexController: UIViewController {
     var isPlaying = false;
     var isFirst = true;
     var isDraging = false;
+    // 循环模式，0：列表循环，1：单曲循环，2：随机循环
+    var loopMode = 0;
+    let dictionaryDao = DictionaryDao();
     
     // 歌曲列表
     let musics = ["塞宁 - 轻微", "明萌派 - 茶汤", "龙宽九段 - 我听这种音乐的时候最爱你"];
@@ -39,15 +42,26 @@ class MusicIndexController: UIViewController {
         
         initView();
         
+        initData();
+        
         loadMusic(musics[currentMusicIndex]);
     }
     
     // 初始化界面
     func initView() {
-        
         // 圆角
         zhuanjiImage.layer.cornerRadius = 100;
         zhuanjiImage.layer.masksToBounds = true;
+    }
+    
+    // 初始化数据
+    func initData() {
+        // 初始化循环模式
+        let dict = dictionaryDao.findDictionaryBy(type: DictionaryKey.TYPE_DEFAULT, key: DictionaryKey.LOOP_MODE);
+        if dict != nil {
+            loopMode = Int(dict!.value)!;
+        }
+        updateLoopStatus();
     }
     
     // 加载音乐
@@ -105,20 +119,27 @@ class MusicIndexController: UIViewController {
     
     // 监听播放进度，修改进度条
     func changeSlider(time: CMTime) {
-        if isDraging {
-            return;
-        }
-        
         //更新进度条进度值
         let currentTime = CMTimeGetSeconds(self.player!.currentTime())
-        self.timeSlider.value = Float(currentTime)
         
-        //更新播放时间
-        self.timeNowLabel.text = formatTime(currentTime);
-        
-        // 播放完毕
-        if Float(currentTime) >= timeSlider.maximumValue {
-            next(self);
+        if !isDraging {
+            self.timeSlider.value = Float(currentTime)
+            //更新播放时间
+            self.timeNowLabel.text = formatTime(currentTime);
+            
+            // 播放完毕
+            if Float(currentTime) >= timeSlider.maximumValue {
+                if loopMode == 1 {
+                    currentMusicIndex -= 1;
+                }
+                next(self);
+            }
+        } else {
+            // 播放完毕, 还是播放这一首
+            if Float(currentTime) >= timeSlider.maximumValue {
+                currentMusicIndex -= 1;
+                next(self);
+            }
         }
     }
     
@@ -210,7 +231,13 @@ class MusicIndexController: UIViewController {
     
     // 下一曲
     @IBAction func next(_ sender: Any) {
-        currentMusicIndex += 1;
+        if loopMode < 2 {
+            // 列表循环
+            currentMusicIndex += 1;
+        } else if loopMode == 2 {
+            // 随机循环
+            currentMusicIndex = Int(arc4random()) % musics.count
+        }
         currentMusicIndex %= musics.count;
         loadMusic(musics[currentMusicIndex]);
         player.play();
@@ -231,7 +258,29 @@ class MusicIndexController: UIViewController {
     
     // 循环
     @IBAction func loop(_ sender: Any) {
-        Toast.showMessage("暂时只能列表循环", onView: self.view);
+        loopMode += 1;
+        loopMode %= 3;
+        
+        dictionaryDao.delete(type: DictionaryKey.TYPE_DEFAULT, key: DictionaryKey.LOOP_MODE);
+        
+        let dict = Dictionary();
+        dict.type = DictionaryKey.TYPE_DEFAULT;
+        dict.key = DictionaryKey.LOOP_MODE;
+        dict.value = String(loopMode);
+        dictionaryDao.save(dict);
+        
+        updateLoopStatus();
+    }
+    
+    func updateLoopStatus() {
+        
+        if loopMode == 0 {
+            loopImage.image = UIImage(named: "list-loop");
+        } else if loopMode == 1 {
+            loopImage.image = UIImage(named: "single-loop");
+        } else {
+            loopImage.image = UIImage(named: "rand-loop");
+        }
     }
     
     // 列表

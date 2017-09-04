@@ -282,7 +282,7 @@
                                 <rect key="frame" x="102" y="540" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loop" translatesAutoresizingMaskIntoConstraints="NO" id="hF4-dv-R3x">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="list-loop" translatesAutoresizingMaskIntoConstraints="NO" id="hF4-dv-R3x">
                                 <rect key="frame" x="16" y="540" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -2770,7 +2770,7 @@
         <image name="favorite" width="20" height="20"/>
         <image name="is-read" width="20" height="20"/>
         <image name="list" width="120" height="120"/>
-        <image name="loop" width="120" height="120"/>
+        <image name="list-loop" width="120" height="120"/>
         <image name="music" width="20" height="20"/>
         <image name="my" width="20" height="20"/>
         <image name="next" width="120" height="120"/>

@@ -28,4 +28,7 @@ class DictionaryKey: NSObject {
     // 新闻下一次开始加载的标识
     static let MIN_BEHOT = "MIN_BEHOT";
     
+    // 循环模式
+    static let LOOP_MODE = "LOOP_MODE";
+    
 }
