@@ -44,6 +44,7 @@
 		1151F0F61F5C2D7700932398 /* 龙宽九段 - 我听这种音乐的时候最爱你.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1151F0F51F5C2D7700932398 /* 龙宽九段 - 我听这种音乐的时候最爱你.mp3 */; };
 		1151F0F81F5C2D8800932398 /* 明萌派 - 茶汤.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1151F0F71F5C2D8800932398 /* 明萌派 - 茶汤.mp3 */; };
 		1151F0FA1F5C2D9400932398 /* 塞宁 - 轻微.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1151F0F91F5C2D9400932398 /* 塞宁 - 轻微.mp3 */; };
+		1163AF261F5D2B6900A8C2A1 /* MusicStoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163AF251F5D2B6900A8C2A1 /* MusicStoreController.swift */; };
 		117D92471F57D05A0087B5BF /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D92461F57D05A0087B5BF /* News.swift */; };
 		11F4B4CD1F4EAE4500BE9850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4B4CC1F4EAE4500BE9850 /* AppDelegate.swift */; };
 		11F4B4D21F4EAE4500BE9850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F4B4D01F4EAE4500BE9850 /* Main.storyboard */; };
@@ -142,6 +143,7 @@
 		1151F0F51F5C2D7700932398 /* 龙宽九段 - 我听这种音乐的时候最爱你.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "龙宽九段 - 我听这种音乐的时候最爱你.mp3"; sourceTree = "<group>"; };
 		1151F0F71F5C2D8800932398 /* 明萌派 - 茶汤.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "明萌派 - 茶汤.mp3"; sourceTree = "<group>"; };
 		1151F0F91F5C2D9400932398 /* 塞宁 - 轻微.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "塞宁 - 轻微.mp3"; sourceTree = "<group>"; };
+		1163AF251F5D2B6900A8C2A1 /* MusicStoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicStoreController.swift; sourceTree = "<group>"; };
 		117D92461F57D05A0087B5BF /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		11F4B4C91F4EAE4500BE9850 /* future-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "future-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F4B4CC1F4EAE4500BE9850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				1134EC7F1F550D8B00A28B4C /* MusicIndexController.swift */,
+				1163AF251F5D2B6900A8C2A1 /* MusicStoreController.swift */,
 			);
 			name = music;
 			sourceTree = "<group>";
@@ -734,6 +737,7 @@
 				1134EC761F541BD700A28B4C /* AboutFunctionController.swift in Sources */,
 				1134EC7B1F54FB8100A28B4C /* ToolCollectionView.swift in Sources */,
 				113666EA1F524DE500DFAC99 /* AboutController.swift in Sources */,
+				1163AF261F5D2B6900A8C2A1 /* MusicStoreController.swift in Sources */,
 				11F4B4D51F4EAE4500BE9850 /* future_v2.xcdatamodeld in Sources */,
 				113666CB1F502CA200DFAC99 /* SettingController.swift in Sources */,
 				11F4B5441F4FEC2000BE9850 /* BookDao.swift in Sources */,

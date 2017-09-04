@@ -50,7 +50,7 @@ class MusicIndexController: UIViewController {
     // 初始化界面
     func initView() {
         // 圆角
-        zhuanjiImage.layer.cornerRadius = 100;
+        zhuanjiImage.layer.cornerRadius = 70;
         zhuanjiImage.layer.masksToBounds = true;
     }
     
