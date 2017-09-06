@@ -96,7 +96,10 @@ class UrlConstants: NSObject {
     // 身份证生成
     static let TOOL_IDCARD_GENERATE = MOBILE + "tool/idcard/generate";
     
-    // 新闻列表
-    static let NEWS_LIST = MOBILE + "news";
+    // 乐库所有音乐
+    static let MUSIC = MOBILE + "music";
+    
+    // 乐库数量
+    static let MUSIC_COUNT = MOBILE + "music/count";
     
 }

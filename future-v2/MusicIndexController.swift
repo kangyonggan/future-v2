@@ -34,7 +34,7 @@ class MusicIndexController: UIViewController {
     let dictionaryDao = DictionaryDao();
     
     // 歌曲列表
-    let musics = ["塞宁 - 轻微", "明萌派 - 茶汤", "龙宽九段 - 我听这种音乐的时候最爱你"];
+    var musics: [URL]!;
     var currentMusicIndex = 0;
     
     override func viewDidLoad() {
@@ -44,7 +44,13 @@ class MusicIndexController: UIViewController {
         
         initData();
         
-        loadMusic(musics[currentMusicIndex]);
+        if musics.isEmpty {
+            let path = Bundle.main.path(forResource: "GALA - Young For You", ofType: "mp3");
+            let url = URL(fileURLWithPath: path!);
+            load(url)
+        } else {
+            load(musics[currentMusicIndex])
+        }
     }
     
     // 初始化界面
@@ -52,6 +58,23 @@ class MusicIndexController: UIViewController {
         // 圆角
         zhuanjiImage.layer.cornerRadius = 70;
         zhuanjiImage.layer.masksToBounds = true;
+        
+        // 通知
+        NotificationCenter.default.addObserver(self, selector: #selector(playMusic(notification:)), name: NSNotification.Name(rawValue: "playMusic"), object: nil)
+    }
+    
+    func playMusic(notification: Notification) {
+        let indexDict = dictionaryDao.findDictionaryBy(type: DictionaryKey.TYPE_DEFAULT, key: DictionaryKey.MUSIC_INDEX);
+        if indexDict != nil {
+            currentMusicIndex = Int(indexDict!.value) ?? 0;
+        }
+        
+        load(musics[currentMusicIndex])
+        player.play();
+        isPlaying = true;
+        
+        updateStatus();
+        anim();
     }
     
     // 初始化数据
@@ -62,14 +85,18 @@ class MusicIndexController: UIViewController {
             loopMode = Int(dict!.value)!;
         }
         updateLoopStatus();
+        
+        let indexDict = dictionaryDao.findDictionaryBy(type: DictionaryKey.TYPE_DEFAULT, key: DictionaryKey.MUSIC_INDEX);
+        if indexDict != nil {
+            currentMusicIndex = Int(indexDict!.value) ?? 0;
+        }
+        
+        // 加载本地MP3
+        musics = FileUtil.getAllMusic();
     }
     
     // 加载音乐
-    func loadMusic(_ name: String) {
-        //初始化播放器
-        //        let url = URL(string: "https://kangyonggan.com/music/demo.mp3")
-        let path = Bundle.main.path(forResource: name, ofType: "mp3");
-        let url = URL(fileURLWithPath: path!);
+    func load(_ url: URL) {
         playerItem = AVPlayerItem(url: url)
         
         // 获取歌曲信息，如：歌曲名称， 歌手名称， 专辑名称， 专辑图片等
@@ -115,6 +142,14 @@ class MusicIndexController: UIViewController {
         // 进度条监听
         player.addPeriodicTimeObserver(forInterval: CMTimeMake(1, 1), queue: DispatchQueue.main, using: changeSlider);
         
+        // 保存当前播放的音乐下标
+        dictionaryDao.delete(type: DictionaryKey.TYPE_DEFAULT, key: DictionaryKey.MUSIC_INDEX)
+        let dict = Dictionary();
+        dict.type = DictionaryKey.TYPE_DEFAULT;
+        dict.key = DictionaryKey.MUSIC_INDEX;
+        dict.value = String(currentMusicIndex);
+        
+        dictionaryDao.save(dict);
     }
     
     // 监听播放进度，修改进度条
@@ -186,6 +221,9 @@ class MusicIndexController: UIViewController {
         
         // tabbar背景色
         self.tabBarController?.tabBar.barTintColor = UIColor(red: 57/255, green: 67/255, blue: 76/255, alpha: 1);
+        
+        // 加载本地MP3
+        musics = FileUtil.getAllMusic();
     }
     
     // 播放/暂停
@@ -217,11 +255,16 @@ class MusicIndexController: UIViewController {
     
     // 上一曲
     @IBAction func prov(_ sender: Any) {
+        if musics.isEmpty {
+            Toast.showMessage("只有一首歌曲", onView: self.view)
+            return
+        }
+        
         currentMusicIndex -= 1;
         if currentMusicIndex < 0 {
             currentMusicIndex = musics.count - 1;
         }
-        loadMusic(musics[currentMusicIndex]);
+        load(musics[currentMusicIndex]);
         player.play();
         isPlaying = true;
         
@@ -231,6 +274,11 @@ class MusicIndexController: UIViewController {
     
     // 下一曲
     @IBAction func next(_ sender: Any) {
+        if musics.isEmpty {
+            Toast.showMessage("只有一首歌曲", onView: self.view)
+            return
+        }
+        
         if loopMode < 2 {
             // 列表循环
             currentMusicIndex += 1;
@@ -239,7 +287,7 @@ class MusicIndexController: UIViewController {
             currentMusicIndex = Int(arc4random()) % musics.count
         }
         currentMusicIndex %= musics.count;
-        loadMusic(musics[currentMusicIndex]);
+        load(musics[currentMusicIndex]);
         player.play();
         isPlaying = true;
         

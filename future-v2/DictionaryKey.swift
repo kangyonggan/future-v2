@@ -31,4 +31,7 @@ class DictionaryKey: NSObject {
     // 循环模式
     static let LOOP_MODE = "LOOP_MODE";
     
+    // 当前播放的音乐下标
+    static let MUSIC_INDEX = "MUSIC_INDEX";
+    
 }

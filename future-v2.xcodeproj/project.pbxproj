@@ -41,10 +41,13 @@
 		113666E81F51E72700DFAC99 /* EmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666E71F51E72700DFAC99 /* EmailController.swift */; };
 		113666EA1F524DE500DFAC99 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666E91F524DE500DFAC99 /* AboutController.swift */; };
 		113666EC1F52516300DFAC99 /* PasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113666EB1F52516300DFAC99 /* PasswordController.swift */; };
-		1151F0F61F5C2D7700932398 /* 龙宽九段 - 我听这种音乐的时候最爱你.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1151F0F51F5C2D7700932398 /* 龙宽九段 - 我听这种音乐的时候最爱你.mp3 */; };
-		1151F0F81F5C2D8800932398 /* 明萌派 - 茶汤.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1151F0F71F5C2D8800932398 /* 明萌派 - 茶汤.mp3 */; };
-		1151F0FA1F5C2D9400932398 /* 塞宁 - 轻微.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1151F0F91F5C2D9400932398 /* 塞宁 - 轻微.mp3 */; };
 		1163AF261F5D2B6900A8C2A1 /* MusicStoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163AF251F5D2B6900A8C2A1 /* MusicStoreController.swift */; };
+		1172D9821F5EB131007D4EC8 /* GALA - Young For You.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1172D9811F5EB131007D4EC8 /* GALA - Young For You.mp3 */; };
+		1172D9841F5F9162007D4EC8 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1172D9831F5F9162007D4EC8 /* Music.swift */; };
+		1172D9861F5F9310007D4EC8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1172D9851F5F9310007D4EC8 /* MusicTableViewController.swift */; };
+		1172D9881F5F9376007D4EC8 /* MusicTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1172D9871F5F9376007D4EC8 /* MusicTableCell.swift */; };
+		1172D98A1F5FB279007D4EC8 /* MusicLocalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1172D9891F5FB279007D4EC8 /* MusicLocalTableViewController.swift */; };
+		1172D98C1F5FB432007D4EC8 /* MusicLocalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1172D98B1F5FB432007D4EC8 /* MusicLocalTableCell.swift */; };
 		117D92471F57D05A0087B5BF /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D92461F57D05A0087B5BF /* News.swift */; };
 		11F4B4CD1F4EAE4500BE9850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4B4CC1F4EAE4500BE9850 /* AppDelegate.swift */; };
 		11F4B4D21F4EAE4500BE9850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F4B4D01F4EAE4500BE9850 /* Main.storyboard */; };
@@ -140,10 +143,13 @@
 		113666E71F51E72700DFAC99 /* EmailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailController.swift; sourceTree = "<group>"; };
 		113666E91F524DE500DFAC99 /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		113666EB1F52516300DFAC99 /* PasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordController.swift; sourceTree = "<group>"; };
-		1151F0F51F5C2D7700932398 /* 龙宽九段 - 我听这种音乐的时候最爱你.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "龙宽九段 - 我听这种音乐的时候最爱你.mp3"; sourceTree = "<group>"; };
-		1151F0F71F5C2D8800932398 /* 明萌派 - 茶汤.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "明萌派 - 茶汤.mp3"; sourceTree = "<group>"; };
-		1151F0F91F5C2D9400932398 /* 塞宁 - 轻微.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "塞宁 - 轻微.mp3"; sourceTree = "<group>"; };
 		1163AF251F5D2B6900A8C2A1 /* MusicStoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicStoreController.swift; sourceTree = "<group>"; };
+		1172D9811F5EB131007D4EC8 /* GALA - Young For You.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "GALA - Young For You.mp3"; sourceTree = "<group>"; };
+		1172D9831F5F9162007D4EC8 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		1172D9851F5F9310007D4EC8 /* MusicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
+		1172D9871F5F9376007D4EC8 /* MusicTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableCell.swift; sourceTree = "<group>"; };
+		1172D9891F5FB279007D4EC8 /* MusicLocalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicLocalTableViewController.swift; sourceTree = "<group>"; };
+		1172D98B1F5FB432007D4EC8 /* MusicLocalTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicLocalTableCell.swift; sourceTree = "<group>"; };
 		117D92461F57D05A0087B5BF /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		11F4B4C91F4EAE4500BE9850 /* future-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "future-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F4B4CC1F4EAE4500BE9850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -243,6 +249,10 @@
 			children = (
 				1134EC7F1F550D8B00A28B4C /* MusicIndexController.swift */,
 				1163AF251F5D2B6900A8C2A1 /* MusicStoreController.swift */,
+				1172D9851F5F9310007D4EC8 /* MusicTableViewController.swift */,
+				1172D9871F5F9376007D4EC8 /* MusicTableCell.swift */,
+				1172D9891F5FB279007D4EC8 /* MusicLocalTableViewController.swift */,
+				1172D98B1F5FB432007D4EC8 /* MusicLocalTableCell.swift */,
 			);
 			name = music;
 			sourceTree = "<group>";
@@ -254,12 +264,10 @@
 			name = music;
 			sourceTree = "<group>";
 		};
-		1151F0F21F5C16A200932398 /* music */ = {
+		1172D9801F5EB122007D4EC8 /* music */ = {
 			isa = PBXGroup;
 			children = (
-				1151F0F91F5C2D9400932398 /* 塞宁 - 轻微.mp3 */,
-				1151F0F71F5C2D8800932398 /* 明萌派 - 茶汤.mp3 */,
-				1151F0F51F5C2D7700932398 /* 龙宽九段 - 我听这种音乐的时候最爱你.mp3 */,
+				1172D9811F5EB131007D4EC8 /* GALA - Young For You.mp3 */,
 			);
 			name = music;
 			sourceTree = "<group>";
@@ -289,7 +297,7 @@
 		11F4B4CB1F4EAE4500BE9850 /* future-v2 */ = {
 			isa = PBXGroup;
 			children = (
-				1151F0F21F5C16A200932398 /* music */,
+				1172D9801F5EB122007D4EC8 /* music */,
 				11F4B5181F4EE75C00BE9850 /* constants */,
 				11F4B5031F4EAFCB00BE9850 /* swift */,
 				11F4B5021F4EAFC300BE9850 /* controller */,
@@ -349,6 +357,7 @@
 				113666DF1F51B87500DFAC99 /* User.swift */,
 				1134EC691F52967200A28B4C /* Message.swift */,
 				117D92461F57D05A0087B5BF /* News.swift */,
+				1172D9831F5F9162007D4EC8 /* Music.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -609,10 +618,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F4B4DA1F4EAE4500BE9850 /* LaunchScreen.storyboard in Resources */,
-				1151F0F61F5C2D7700932398 /* 龙宽九段 - 我听这种音乐的时候最爱你.mp3 in Resources */,
-				1151F0FA1F5C2D9400932398 /* 塞宁 - 轻微.mp3 in Resources */,
-				1151F0F81F5C2D8800932398 /* 明萌派 - 茶汤.mp3 in Resources */,
 				11F4B5301F4FC48A00BE9850 /* Assets.xcassets in Resources */,
+				1172D9821F5EB131007D4EC8 /* GALA - Young For You.mp3 in Resources */,
 				11F4B4D21F4EAE4500BE9850 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,11 +718,13 @@
 				113666CF1F50688900DFAC99 /* ThemeTableCell.swift in Sources */,
 				11F4B5201F4EEA9600BE9850 /* DictionaryKey.swift in Sources */,
 				111DBBBD1F5574480087512B /* FileUtil.swift in Sources */,
+				1172D9881F5F9376007D4EC8 /* MusicTableCell.swift in Sources */,
 				11F4B52B1F4FB81B00BE9850 /* BookIndexController.swift in Sources */,
 				117D92471F57D05A0087B5BF /* News.swift in Sources */,
 				1134EC821F5511DC00A28B4C /* QrScanController.swift in Sources */,
 				113666E61F51D84E00DFAC99 /* RealnameController.swift in Sources */,
 				11F4B5481F4FF3AF00BE9850 /* BookTableCell.swift in Sources */,
+				1172D9841F5F9162007D4EC8 /* Music.swift in Sources */,
 				11F4B5061F4ECE7700BE9850 /* LoginController.swift in Sources */,
 				11F4B5321F4FC82B00BE9850 /* CategoryCollectionView.swift in Sources */,
 				11F4B54C1F50049A00BE9850 /* SectionDao.swift in Sources */,
@@ -739,6 +748,7 @@
 				113666EA1F524DE500DFAC99 /* AboutController.swift in Sources */,
 				1163AF261F5D2B6900A8C2A1 /* MusicStoreController.swift in Sources */,
 				11F4B4D51F4EAE4500BE9850 /* future_v2.xcdatamodeld in Sources */,
+				1172D98A1F5FB279007D4EC8 /* MusicLocalTableViewController.swift in Sources */,
 				113666CB1F502CA200DFAC99 /* SettingController.swift in Sources */,
 				11F4B5441F4FEC2000BE9850 /* BookDao.swift in Sources */,
 				111DBBC31F566B140087512B /* IdcardGenerateController.swift in Sources */,
@@ -750,6 +760,7 @@
 				1134EC7D1F54FB9000A28B4C /* ToolCollectionCell.swift in Sources */,
 				11F4B5421F4FEA6200BE9850 /* FavoriteCollectionCell.swift in Sources */,
 				1134EC841F55185D00A28B4C /* QrScanResultController.swift in Sources */,
+				1172D98C1F5FB432007D4EC8 /* MusicLocalTableCell.swift in Sources */,
 				11F4B53E1F4FD0C600BE9850 /* HotCollectionCell.swift in Sources */,
 				11F4B5401F4FEA2900BE9850 /* FavoriteCollectionView.swift in Sources */,
 				111DBBC11F564D490087512B /* IdcardVerifyController.swift in Sources */,
@@ -758,6 +769,7 @@
 				11F4B51E1F4EEA1700BE9850 /* DictionaryDao.swift in Sources */,
 				11F4B53A1F4FD04000BE9850 /* HotCollectionView.swift in Sources */,
 				11F4B5131F4EE21000BE9850 /* StringUtil.swift in Sources */,
+				1172D9861F5F9310007D4EC8 /* MusicTableViewController.swift in Sources */,
 				113666D31F506C8700DFAC99 /* SectionTableCell.swift in Sources */,
 				11F4B54A1F5003F100BE9850 /* Section.swift in Sources */,
 				1134EC6A1F52967200A28B4C /* Message.swift in Sources */,
