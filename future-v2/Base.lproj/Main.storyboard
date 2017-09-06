@@ -46,7 +46,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                                 <connections>
                                     <action selector="endInputUsername:" destination="0fL-fk-3A8" eventType="editingDidEndOnExit" id="9Iy-HC-nao"/>
                                     <action selector="usernameChanged:" destination="0fL-fk-3A8" eventType="editingChanged" id="dJC-3t-lWF"/>
@@ -137,7 +137,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                                 <connections>
                                     <action selector="endInputUsername:" destination="3ZK-OW-f6B" eventType="editingDidEndOnExit" id="FcI-kO-LGM"/>
                                     <action selector="usernameChange:" destination="3ZK-OW-f6B" eventType="editingChanged" id="Mo0-Ml-pO4"/>
@@ -148,7 +148,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                                 <connections>
                                     <action selector="authCodeChange:" destination="3ZK-OW-f6B" eventType="editingChanged" id="zny-VS-jaB"/>
                                     <action selector="endInputAuthCode:" destination="3ZK-OW-f6B" eventType="editingDidEndOnExit" id="EW6-Rn-CKc"/>
@@ -2471,7 +2471,7 @@
                         <viewControllerLayoutGuide type="bottom" id="sVX-oi-X0w"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CkZ-LJ-2fF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zl6-4s-OOY">
@@ -2536,7 +2536,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
                                     <action selector="endInputUsername:" destination="w9L-t1-i1z" eventType="editingDidEndOnExit" id="sTB-vA-HfU"/>
                                     <action selector="usernameChange:" destination="w9L-t1-i1z" eventType="editingChanged" id="GuL-LS-Ozw"/>
@@ -2547,7 +2547,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
                                     <action selector="authCodeChange:" destination="w9L-t1-i1z" eventType="editingChanged" id="N1X-26-9cV"/>
                                     <action selector="endInputAuthCode:" destination="w9L-t1-i1z" eventType="editingDidEndOnExit" id="tbu-zz-qFV"/>
@@ -2987,6 +2987,6 @@
         <image name="zhuanji-bg" width="206" height="205"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ew0-y0-xUT"/>
+        <segue reference="pQT-xW-hBq"/>
     </inferredMetricsTieBreakers>
 </document>
