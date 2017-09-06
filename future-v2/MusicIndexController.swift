@@ -45,9 +45,7 @@ class MusicIndexController: UIViewController {
         initData();
         
         if musics.isEmpty {
-            let path = Bundle.main.path(forResource: "GALA - Young For You", ofType: "mp3");
-            let url = URL(fileURLWithPath: path!);
-            load(url)
+            Toast.showMessage("请先下载歌曲", onView: self.view);
         } else {
             load(musics[currentMusicIndex])
         }
@@ -228,6 +226,11 @@ class MusicIndexController: UIViewController {
     
     // 播放/暂停
     @IBAction func playOrPause(_ sender: Any) {
+        if musics.isEmpty {
+            Toast.showMessage("请先下载歌曲", onView: self.view)
+            return
+        }
+        
         if isFirst {
             anim();
             isFirst = false;
@@ -256,7 +259,7 @@ class MusicIndexController: UIViewController {
     // 上一曲
     @IBAction func prov(_ sender: Any) {
         if musics.isEmpty {
-            Toast.showMessage("只有一首歌曲", onView: self.view)
+            Toast.showMessage("请先下载歌曲", onView: self.view)
             return
         }
         
@@ -275,7 +278,7 @@ class MusicIndexController: UIViewController {
     // 下一曲
     @IBAction func next(_ sender: Any) {
         if musics.isEmpty {
-            Toast.showMessage("只有一首歌曲", onView: self.view)
+            Toast.showMessage("请先下载歌曲", onView: self.view)
             return
         }
         
