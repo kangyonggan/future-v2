@@ -67,6 +67,8 @@ class MusicIndexController: UIViewController {
             currentMusicIndex = Int(indexDict!.value) ?? 0;
         }
         
+        musics = FileUtil.getAllMusic();
+        
         load(musics[currentMusicIndex])
         player.play();
         isPlaying = true;
