@@ -331,11 +331,6 @@ class MusicIndexController: UIViewController {
         }
     }
     
-    // 列表
-    @IBAction func list(_ sender: Any) {
-        Toast.showMessage("暂时只能播放这几首歌", onView: self.view);
-    }
-    
     // 拖拽进度条
     @IBAction func drag(_ sender: Any) {
         let value = timeSlider.value;
