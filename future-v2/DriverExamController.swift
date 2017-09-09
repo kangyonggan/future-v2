@@ -332,7 +332,7 @@ class DriverExamController: UIViewController {
             }
         }
         
-        return "一共\(answers.count)题，对了\(rightCount)题, 错了\(answers.count - rightCount - noSelectCount)题, 还没\(noSelectCount)未选";
+        return "一共\(answers.count)题，对了\(rightCount)题, 错了\(answers.count - rightCount - noSelectCount)题, 还没\(noSelectCount)题未选";
     }
     
     // 判断是否正在加载

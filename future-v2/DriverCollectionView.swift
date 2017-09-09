@@ -30,7 +30,6 @@ class DriverCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
         items.append(("科目一", "题库（十）", 10));
         items.append(("科目一", "题库（十一）", 11));
         items.append(("科目一", "题库（十二）", 12));
-        items.append(("科目一", "题库（十三）", 13));
         
         items.append(("科目四", "题库（一）", 1));
         items.append(("科目四", "题库（二）", 2));
@@ -42,7 +41,6 @@ class DriverCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
         items.append(("科目四", "题库（八）", 8));
         items.append(("科目四", "题库（九）", 9));
         items.append(("科目四", "题库（十）", 10));
-        items.append(("科目四", "题库（十一）", 11));
     }
     
     // collection view //
