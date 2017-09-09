@@ -15,6 +15,7 @@ class UrlConstants: NSObject {
     static let DOMAIN = "https://kangyonggan.com/";
 //    static let DOMAIN = "http://127.0.0.1:8080/";
     
+    
     // 手机端前缀
     static let MOBILE = "mobile/";
     
@@ -101,5 +102,8 @@ class UrlConstants: NSObject {
     
     // 乐库数量
     static let MUSIC_COUNT = MOBILE + "music/count";
+    
+    // 驾照题库
+    static let STORAGE_LIST = MOBILE + "storage/list";
     
 }

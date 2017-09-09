@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110149E71F628CBA004E32E4 /* DriverIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110149E61F628CBA004E32E4 /* DriverIndexController.swift */; };
+		110149E91F628F72004E32E4 /* DriverCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110149E81F628F72004E32E4 /* DriverCollectionView.swift */; };
+		110149EB1F628F92004E32E4 /* DriverCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110149EA1F628F92004E32E4 /* DriverCollectionCell.swift */; };
+		110149ED1F62952D004E32E4 /* DriverExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110149EC1F62952D004E32E4 /* DriverExamController.swift */; };
+		110149EF1F629886004E32E4 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110149EE1F629886004E32E4 /* Storage.swift */; };
+		110149F11F63B229004E32E4 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110149F01F63B229004E32E4 /* AsyncImage.swift */; };
+		110149F31F63CA72004E32E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 110149F21F63CA72004E32E4 /* Assets.xcassets */; };
 		111DBBBB1F5563040087512B /* PhotoAlbumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBBA1F5563040087512B /* PhotoAlbumUtil.swift */; };
 		111DBBBD1F5574480087512B /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBBC1F5574480087512B /* FileUtil.swift */; };
 		111DBBBF1F5576D50087512B /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DBBBE1F5576D50087512B /* CacheImage.swift */; };
@@ -73,7 +80,6 @@
 		11F4B5281F4F00C900BE9850 /* ForgotSuccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4B5271F4F00C900BE9850 /* ForgotSuccessController.swift */; };
 		11F4B52B1F4FB81B00BE9850 /* BookIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4B52A1F4FB81B00BE9850 /* BookIndexController.swift */; };
 		11F4B52D1F4FB88F00BE9850 /* MyIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4B52C1F4FB88F00BE9850 /* MyIndexController.swift */; };
-		11F4B5301F4FC48A00BE9850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F4B52F1F4FC48A00BE9850 /* Assets.xcassets */; };
 		11F4B5321F4FC82B00BE9850 /* CategoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4B5311F4FC82B00BE9850 /* CategoryCollectionView.swift */; };
 		11F4B5361F4FC92200BE9850 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4B5351F4FC92200BE9850 /* Category.swift */; };
 		11F4B5381F4FCCE100BE9850 /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4B5371F4FCCE100BE9850 /* CategoryCollectionCell.swift */; };
@@ -109,6 +115,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		110149E61F628CBA004E32E4 /* DriverIndexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverIndexController.swift; sourceTree = "<group>"; };
+		110149E81F628F72004E32E4 /* DriverCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverCollectionView.swift; sourceTree = "<group>"; };
+		110149EA1F628F92004E32E4 /* DriverCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverCollectionCell.swift; sourceTree = "<group>"; };
+		110149EC1F62952D004E32E4 /* DriverExamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverExamController.swift; sourceTree = "<group>"; };
+		110149EE1F629886004E32E4 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		110149F01F63B229004E32E4 /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		110149F21F63CA72004E32E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		111DBBBA1F5563040087512B /* PhotoAlbumUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumUtil.swift; sourceTree = "<group>"; };
 		111DBBBC1F5574480087512B /* FileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		111DBBBE1F5576D50087512B /* CacheImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
@@ -181,7 +194,6 @@
 		11F4B5271F4F00C900BE9850 /* ForgotSuccessController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotSuccessController.swift; sourceTree = "<group>"; };
 		11F4B52A1F4FB81B00BE9850 /* BookIndexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookIndexController.swift; sourceTree = "<group>"; };
 		11F4B52C1F4FB88F00BE9850 /* MyIndexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyIndexController.swift; sourceTree = "<group>"; };
-		11F4B52F1F4FC48A00BE9850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11F4B5311F4FC82B00BE9850 /* CategoryCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionView.swift; sourceTree = "<group>"; };
 		11F4B5351F4FC92200BE9850 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		11F4B5371F4FCCE100BE9850 /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
@@ -240,6 +252,10 @@
 				111DBBC21F566B140087512B /* IdcardGenerateController.swift */,
 				111DBBC41F567CC80087512B /* ProvinceTableViewController.swift */,
 				111DBBC61F567FE40087512B /* ProvinceTableCell.swift */,
+				110149E61F628CBA004E32E4 /* DriverIndexController.swift */,
+				110149E81F628F72004E32E4 /* DriverCollectionView.swift */,
+				110149EA1F628F92004E32E4 /* DriverCollectionCell.swift */,
+				110149EC1F62952D004E32E4 /* DriverExamController.swift */,
 			);
 			name = tool;
 			sourceTree = "<group>";
@@ -358,6 +374,7 @@
 				1134EC691F52967200A28B4C /* Message.swift */,
 				117D92461F57D05A0087B5BF /* News.swift */,
 				1172D9831F5F9162007D4EC8 /* Music.swift */,
+				110149EE1F629886004E32E4 /* Storage.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -379,6 +396,7 @@
 				111DBBBA1F5563040087512B /* PhotoAlbumUtil.swift */,
 				111DBBBC1F5574480087512B /* FileUtil.swift */,
 				111DBBBE1F5576D50087512B /* CacheImage.swift */,
+				110149F01F63B229004E32E4 /* AsyncImage.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -400,7 +418,7 @@
 		11F4B5031F4EAFCB00BE9850 /* swift */ = {
 			isa = PBXGroup;
 			children = (
-				11F4B52F1F4FC48A00BE9850 /* Assets.xcassets */,
+				110149F21F63CA72004E32E4 /* Assets.xcassets */,
 				11F4B4CC1F4EAE4500BE9850 /* AppDelegate.swift */,
 				11F4B4D01F4EAE4500BE9850 /* Main.storyboard */,
 				11F4B4D81F4EAE4500BE9850 /* LaunchScreen.storyboard */,
@@ -618,8 +636,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F4B4DA1F4EAE4500BE9850 /* LaunchScreen.storyboard in Resources */,
-				11F4B5301F4FC48A00BE9850 /* Assets.xcassets in Resources */,
 				1172D9821F5EB131007D4EC8 /* GALA - Young For You.mp3 in Resources */,
+				110149F31F63CA72004E32E4 /* Assets.xcassets in Resources */,
 				11F4B4D21F4EAE4500BE9850 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -710,13 +728,16 @@
 				1134EC6C1F52973A00A28B4C /* MessageTableCell.swift in Sources */,
 				11F4B5461F4FF24800BE9850 /* BookTableViewController.swift in Sources */,
 				11F4B5261F4EFCED00BE9850 /* ForgotController.swift in Sources */,
+				110149E91F628F72004E32E4 /* DriverCollectionView.swift in Sources */,
 				1134EC721F52E7DD00A28B4C /* MessageReplyController.swift in Sources */,
 				111DBBC51F567CC80087512B /* ProvinceTableViewController.swift in Sources */,
+				110149ED1F62952D004E32E4 /* DriverExamController.swift in Sources */,
 				11F4B54E1F5009C400BE9850 /* SectionDetailController.swift in Sources */,
 				11F4B50D1F4EDE3E00BE9850 /* AppConstants.swift in Sources */,
 				11F4B50F1F4EDE6600BE9850 /* UrlConstants.swift in Sources */,
 				113666CF1F50688900DFAC99 /* ThemeTableCell.swift in Sources */,
 				11F4B5201F4EEA9600BE9850 /* DictionaryKey.swift in Sources */,
+				110149EB1F628F92004E32E4 /* DriverCollectionCell.swift in Sources */,
 				111DBBBD1F5574480087512B /* FileUtil.swift in Sources */,
 				1172D9881F5F9376007D4EC8 /* MusicTableCell.swift in Sources */,
 				11F4B52B1F4FB81B00BE9850 /* BookIndexController.swift in Sources */,
@@ -726,7 +747,9 @@
 				11F4B5481F4FF3AF00BE9850 /* BookTableCell.swift in Sources */,
 				1172D9841F5F9162007D4EC8 /* Music.swift in Sources */,
 				11F4B5061F4ECE7700BE9850 /* LoginController.swift in Sources */,
+				110149F11F63B229004E32E4 /* AsyncImage.swift in Sources */,
 				11F4B5321F4FC82B00BE9850 /* CategoryCollectionView.swift in Sources */,
+				110149EF1F629886004E32E4 /* Storage.swift in Sources */,
 				11F4B54C1F50049A00BE9850 /* SectionDao.swift in Sources */,
 				111DBBC71F567FE40087512B /* ProvinceTableCell.swift in Sources */,
 				11F4B5221F4EF02200BE9850 /* RegisterController.swift in Sources */,
@@ -775,6 +798,7 @@
 				1134EC6A1F52967200A28B4C /* Message.swift in Sources */,
 				1134EC791F54FB0700A28B4C /* ToolIndexController.swift in Sources */,
 				11F4B5381F4FCCE100BE9850 /* CategoryCollectionCell.swift in Sources */,
+				110149E71F628CBA004E32E4 /* DriverIndexController.swift in Sources */,
 				11F4B5361F4FC92200BE9850 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
