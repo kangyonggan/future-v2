@@ -588,7 +588,7 @@
 				TargetAttributes = {
 					11F4B4C81F4EAE4500BE9850 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = ZAU45PX3J5;
+						DevelopmentTeam = QY9B64CNUW;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -953,10 +953,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_ACTIVITY_MODE = "";
-				DEVELOPMENT_TEAM = ZAU45PX3J5;
+				DEVELOPMENT_TEAM = QY9B64CNUW;
 				INFOPLIST_FILE = "future-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kangyonggan.future-v2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kangyonggan.future-v3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -968,10 +968,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_ACTIVITY_MODE = "";
-				DEVELOPMENT_TEAM = ZAU45PX3J5;
+				DEVELOPMENT_TEAM = QY9B64CNUW;
 				INFOPLIST_FILE = "future-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kangyonggan.future-v2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kangyonggan.future-v3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

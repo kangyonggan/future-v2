@@ -34,4 +34,6 @@ class DictionaryKey: NSObject {
     // 当前播放的音乐下标
     static let MUSIC_INDEX = "MUSIC_INDEX";
     
+    // 小说详情页导航栏状态
+    static let BAR_STATE = "BAR_STATE";
 }

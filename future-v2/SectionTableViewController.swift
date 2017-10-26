@@ -43,6 +43,8 @@ class SectionTableViewController: UITableViewController {
         let row = clacSectionRow();
         let indexPath = IndexPath(row: row, section: 0);
         tableView.scrollToRow(at: indexPath, at: .middle, animated: true);
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: false);
     }
     
     // MARK: - Table View

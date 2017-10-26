@@ -40,6 +40,8 @@ class SectionDetailController: UIViewController, UIWebViewDelegate  {
         super.viewWillAppear(animated);
         
         updateSizeAndTheme();
+        
+        updateBarState();
     }
     
     // 更新字体大小和主题
@@ -85,7 +87,7 @@ class SectionDetailController: UIViewController, UIWebViewDelegate  {
     func updateContent() {
         DispatchQueue.main.async {
             self.navigationItem.title = self.section.title;
-            self.webView.loadHTMLString(self.section.content, baseURL: nil);
+            self.webView.loadHTMLString(self.section.title + "<br/><br/>" + self.section.content, baseURL: nil);
         }
     }
     
@@ -242,6 +244,38 @@ class SectionDetailController: UIViewController, UIWebViewDelegate  {
             // 更新本地小说的最后阅读章节
             updateLastBookSection();
         }
+    }
+    
+    // 显示/隐藏 导航栏
+    @IBAction func hiddenBar(_ sender: Any) {
+        let dict = updateBarState();
+        
+        dictionaryDao.delete(type: DictionaryKey.TYPE_DEFAULT, key: DictionaryKey.BAR_STATE);
+        dictionaryDao.save(dict);
+    }
+    
+    func updateBarState() -> Dictionary {
+        var dict = dictionaryDao.findDictionaryBy(type: DictionaryKey.TYPE_DEFAULT, key: DictionaryKey.BAR_STATE);
+        
+        if dict == nil {
+            dict = Dictionary();
+            dict!.type = DictionaryKey.TYPE_DEFAULT;
+            dict!.key = DictionaryKey.BAR_STATE;
+            
+            dict!.value = "0";
+        }
+        
+        if dict!.value == "0" {
+            // 不显示
+            self.navigationController?.setNavigationBarHidden(true, animated: false);
+            dict?.value = "1";
+        } else {
+            // 显示
+            self.navigationController?.setNavigationBarHidden(false, animated: false);
+            dict?.value = "0";
+        }
+        
+        return dict!;
     }
     
     // 设置

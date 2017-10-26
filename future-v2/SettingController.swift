@@ -33,6 +33,7 @@ class SettingController: UIViewController {
     
     // 初始化界面
     func initView() {
+        self.navigationController?.setNavigationBarHidden(false, animated: false);
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .done, target: nil, action: nil)
         themes = AppConstants.themes();
         
